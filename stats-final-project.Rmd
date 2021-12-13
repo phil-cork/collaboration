@@ -37,7 +37,9 @@ This is a crucial question to answer because research shows the importance of ea
 
 To measure the effects of text correspondence on verification rates, the analysis was performed at a child level to mitigate the impact of a parent having more than one child in the experiment. The statistical model used to analyze the question discussed above was the following: 
 
-Our outcome of interest, N(i) is a dichotomous variable indicating whether or not an observation was verified. The two treatment groups who received messages on different platforms or received personalized text messages have their estimated effects shown by Beta1 and Beta2 respectively.  Two interaction variables were also included to account for the impact of Head Start alongside the treatment groups. These are estimated in Beta 4 and Beta 5. To USE these, a dummy variable, “HS”, which marcates whether or not a student applied for Head Start, is included in the model with the effect indicated by Beta3. Lastly, BetaJ represents the various estimated Betas determined for the forthcoming controls that were included to account for variation among the student population. 
+$n_i$ = $\alpha$ + $\beta_1$($group_2$) + $\beta_2$($group_3$) + $\beta_4$($HS$) +  $\beta_5$($group_2 * HS$) $\beta_6$($controls$) + $e_i$
+
+Our outcome of interest, $n_i$is a dichotomous variable indicating whether or not an observation was verified. The two treatment groups who received messages on different platforms or received personalized text messages have their estimated effects shown by $\beta_1$ and $\beta_2$ respectively.  Two interaction variables were also included to account for the impact of Head Start alongside the treatment groups. These are estimated in $\beta_4$ and $\beta_5$. To use these, a dummy variable, “HS”, which marcates whether or not a student applied for Head Start, is included in the model with the effect indicated by $\beta_3$. Lastly, $\beta_J$ represents the various estimated Betas determined for the forthcoming controls that were included to account for variation among the student population. 
 
 #### 2bi. What is the dependent variable?
 
@@ -49,7 +51,7 @@ The primary independent variable of interest was a set of three treatments perta
 
 #### 2biii. What are the null and alternative hypotheses?
 
-While there is no explicit outline of the null or alternative hypothesis, it can be derived that the null hypothesis is that the novel forms of communication do not make a meaningful difference to odds of verification. In this scenario, the alternative hypothesis is that either text messages or the personalization of these text messages will have some form of impact on the odds of verification. In statistical terminology, the null hypothesis is that Betas = 0 while the alternative hypothesis is that Betas will not equal 0. 
+While there is no explicit outline of the null or alternative hypothesis, it can be derived that the null hypothesis is that the novel forms of communication do not make a meaningful difference to odds of verification. In this scenario, the alternative hypothesis is that either text messages or the personalization of these text messages will have some form of impact on the odds of verification. In statistical terminology, the null hypothesis is that $\beta$ = 0 while the alternative hypothesis is that $\beta$ will not equal 0. 
 
 #### 2c. Does the model use any specific functional form (e.g., probit, log)? If yes, explain why.
 
@@ -89,7 +91,7 @@ Focussing only on whether a student is verified or not, autocorrelation is not a
 
 #### 5b. Is the test statistically powerful?  What are the implications of your answer to this question for how you will interpret your results?
 
-To be statistically powerful, the data and accompanying model must be equipped to limit the possibility of type II error. As the authors use a variety of levels of statistical significance in their results as shown on page 318, the most straightforward tay to minimize type II error is to decrease se(Beta1) as much as possible. As standard error and the number of observations are inversely related, a higher N will yield a relatively lower standard error. In this experiment, the number of observations for each treatment group was roughly 1400. Given the size of the treatment groups, we can assume in our analysis that the authors’ likelihood of making a type II error is minimized and any conclusions drawn about potential causal relationships are statistically sound. 
+To be statistically powerful, the data and accompanying model must be equipped to limit the possibility of type II error. As the authors use a variety of levels of statistical significance in their results as shown on page 318, the most straightforward to to minimize type II error is to decrease ($se(B_1)$) as much as possible. As standard error and the number of observations are inversely related, a higher N will yield a relatively lower standard error. In this experiment, the number of observations for each treatment group was roughly 1400. Given the size of the treatment groups, we can assume in our analysis that the authors’ likelihood of making a type II error is minimized and any conclusions drawn about potential causal relationships are statistically sound. 
 
 #### 6. Have the authors considered heterogeneous treatment effects?  (That is, have they considered whether the effect of the key independent variable(s) differs across sub-groups?)  Describe how they do or could address this possibility.
 
@@ -118,12 +120,11 @@ Upon reflection of the initial results, the authors wrapped the obstacles of ver
 
 #### 1b. Write out a statistical model and pay special attention to your subscripts, as these indicate your unit-of-analysis (e.g., individuals at a given point in time, or national data over time or perhaps individual data over time).
 
-To measure the effects of a virtual-only verification process, we will employ an RCT. The model to perform this analysis is shown below. 
+To measure the effects of a virtual-only verification process, we will employ an RCT. The model to perform this analysis is shown here: 
 
-Outcome = b0 + b1treatment + b2HS + B3(HS*treatment)+ work capacity + employment status + controls + error 
+$n_i$ = $\beta_0$ + $\beta_1$($treatment$) + $\beta_2$($HS$) + $\beta_3$($HS*treatment$) +  $\beta_4$($schedule$) + $\beta_5$($employment$) + $\beta_5$($controls$) + $e_i$ 
 
-
-Description about model 
+The outcome, $n_i$, is the log odds of a child being verified given the forthcoming variables. Our treatment's effect will be conveyed by $\beta_1$, while the combination of $\beta_2$ and $\beta_3$ represent the effect of Head Start coupled with an interaction variable based off the treatment. We will be adding in two more controlling variables, accounting for the parent's work capacity and their employment status, shown by $\beta_4$ and $\beta_5$ respectively. We will include the same SES controls that the previous author included in their model that investigated verification. 
 
 #### 1bi. What is the dependent variable?
 
