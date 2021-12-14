@@ -2,7 +2,9 @@
 title: "PPOL-560 Final Project"
 author: "Lawand Yaseen & Phil Cork"
 date: "12/16/2021"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -37,9 +39,9 @@ This is a crucial question to answer because research shows the importance of ea
 
 To measure the effects of text correspondence on verification rates, the analysis was performed at a child level to mitigate the impact of a parent having more than one child in the experiment. The statistical model used to analyze the question discussed above was the following: 
 
-$n_i$ = $\alpha$ + $\beta_1$($group_2$) + $\beta_2$($group_3$) + $\beta_4$($HS$) +  $\beta_5$($group_2 * HS$) $\beta_6$($controls$) + $e_i$
+$n_i$ = $\alpha$ + $\beta_1$($group_2$) + $\beta_2$($group_3$) + $\beta_3$($HS$) + $\beta_4$($group_2 * HS$) + $\beta_5$($group_2 * HS$) $\beta_J$($controls$) + $e_i$
 
-Our outcome of interest, $n_i$ is a dichotomous variable indicating whether or not an observation was verified. The two treatment groups who received messages on different platforms or received personalized text messages have their estimated effects shown by $\beta_1$ and $\beta_2$ respectively.  Two interaction variables were also included to account for the impact of Head Start alongside the treatment groups. These are estimated in $\beta_4$ and $\beta_5$. To use these, a dummy variable, "HS", which marcates whether or not a student applied for Head Start, is included in the model with the effect indicated by $\beta_3$. Lastly, $\beta_J$ represents the various estimated $\beta's$ determined for the forthcoming controls that were included to account for variation among the student population. 
+Our outcome of interest, $n_i$ is a dichotomous variable indicating whether or not an observation was verified. The two treatment groups who received messages on different platforms or received personalized text messages have their estimated effects shown by $\beta_1$ and $\beta_2$ respectively.  Two interaction variables were also included to account for the impact of Head Start alongside the treatment groups. These are estimated in $\beta_4$ and $\beta_5$. To use these, a dummy variable, "HS", which demarcates whether or not a student applied for Head Start, is included in the model with the effect indicated by $\beta_3$. Lastly, $\beta_J$ represents the various estimated $\beta's$ determined for the forthcoming controls that were included to account for variation among the student population. 
 
 #### 2bi. What is the dependent variable?
 
@@ -95,7 +97,7 @@ To be statistically powerful, the data and accompanying model must be equipped t
 
 #### 6. Have the authors considered heterogeneous treatment effects?  (That is, have they considered whether the effect of the key independent variable(s) differs across sub-groups?)  Describe how they do or could address this possibility.
 
-To adequately draw conclusions while taking into account heterogeneous treatment effects, the authors' included two interaction variables, both of which investigate the impact of needing to verify for Head Start along with the treatment groups. The reasoning they outlined for inclusion of the interaction variables was "the verification process in New Orleans is more complicated for Head Start applicants and because this could be a particularly disadvantaged population." As Head Start applicants are eligible due to being below an income threshold, they are required to provide more information to verify their eligibility. Since it is a more thorough process, the expectation was that the effect of different communication methods could have a compounding impact on the subset of the population eligible for Head Start. For the population not eligible for Head Start, the inclusion of these variables will not have an impact on their log odds of eligibility as the interaction variable will be set to 0, nullifying the estimated coefficients $\beta_3$ and $\beta_4$. 
+To adequately draw conclusions while taking into account heterogeneous treatment effects, the authors' included two interaction variables, both of which investigate the impact of needing to verify for Head Start along with the treatment groups. The reasoning they outlined for inclusion of the interaction variables was "the verification process in New Orleans is more complicated for Head Start applicants and because this could be a particularly disadvantaged population" (Weixler 316) As Head Start applicants are eligible due to being below an income threshold, they are required to provide more information to verify their eligibility. Since it is a more thorough process, the expectation was that the effect of different communication methods could have a compounding impact on the subset of the population eligible for Head Start. For the population not eligible for Head Start, the inclusion of these variables will not have an impact on their log odds of eligibility as the interaction variable will be set to 0, nullifying the estimated coefficients $\beta_4$ and $\beta_5$. 
 
 #### 7. Are the results generalizable?
 
@@ -184,4 +186,4 @@ While our main treatment will be applied using an RCT, we do not anticipate the 
 
 #### 6. Are the results generalizable?
 
-This experiment would likely require preemptive qualifiers that the results, whether statistically significant or not, were drawn from a RCT working with a specific demographic, in a certain location, in a certain window of time. When considering a treatment that is larger in scope by changing the system demonstrably rather than adding additional touchpoints of communication, this hesitation to assume results would directly correlate to other iterations of the experiment is warranted. With that said, there are no particular factors that stand out as setting low income students from Orleans Parish so distinctly apart from comparable communities that would rule out the results being fairly generalizable either, so long as precautions were made regarding any further assumptions based on the results.
+This experiment would likely require preemptive qualifiers that the results, whether statistically significant or not, were drawn from a RCT working with a specific demographic, in a certain location, in a certain window of time. When considering a treatment that is larger in scope by changing the system demonstrably rather than adding additional touch-points of communication, this hesitation to assume results would directly correlate to other iterations of the experiment is warranted. With that said, there are no particular factors that stand out as setting low income students from Orleans Parish so distinctly apart from comparable communities that would rule out the results being fairly applicable either, so long as precautions were made regarding any further assumptions based on the results.
