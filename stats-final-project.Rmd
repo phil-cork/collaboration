@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Part 1: Discuss Existing Research
 
-#### 1. Find a research paper on a topic of interest that uses OLS or probit/logit/LPM. Provide a complete citation to this work. Please include a link (or send the paper) if possible. 
+#### 1. Find a research paper on a topic of interest that uses OLS or probit/logit/LPM. Provide a complete citation to this work.
 
 In this paper, the authors investigate the effectiveness of additional messaging in aiding parents of low income students to verify as part of the process for enrolling in early child education in Orleans Parish, Louisiana.
  
@@ -39,11 +39,11 @@ To measure the effects of text correspondence on verification rates, the analysi
 
 $n_i$ = $\alpha$ + $\beta_1$($group_2$) + $\beta_2$($group_3$) + $\beta_4$($HS$) +  $\beta_5$($group_2 * HS$) $\beta_6$($controls$) + $e_i$
 
-Our outcome of interest, $n_i$ is a dichotomous variable indicating whether or not an observation was verified. The two treatment groups who received messages on different platforms or received personalized text messages have their estimated effects shown by $\beta_1$ and $\beta_2$ respectively.  Two interaction variables were also included to account for the impact of Head Start alongside the treatment groups. These are estimated in $\beta_4$ and $\beta_5$. To use these, a dummy variable, "HS", which marcates whether or not a student applied for Head Start, is included in the model with the effect indicated by $\beta_3$. Lastly, $\beta_J$ represents the various estimated Betas determined for the forthcoming controls that were included to account for variation among the student population. 
+Our outcome of interest, $n_i$ is a dichotomous variable indicating whether or not an observation was verified. The two treatment groups who received messages on different platforms or received personalized text messages have their estimated effects shown by $\beta_1$ and $\beta_2$ respectively.  Two interaction variables were also included to account for the impact of Head Start alongside the treatment groups. These are estimated in $\beta_4$ and $\beta_5$. To use these, a dummy variable, "HS", which marcates whether or not a student applied for Head Start, is included in the model with the effect indicated by $\beta_3$. Lastly, $\beta_J$ represents the various estimated $\beta's$ determined for the forthcoming controls that were included to account for variation among the student population. 
 
 #### 2bi. What is the dependent variable?
 
-The dependent variable of interest is whether or not the child was verified for ECE eligibility by the deadline outlined by the Louisiana department responsible for this (idk this rn but will add its proper name soon). The log odds of the outcome is denoted by $n_i$, which is reliant upon the treatment input along with relating variables that were also controlled for. It is important to note that log odds differentiates from probability which is the method of interpretation we are more familiar with. Odds represent the proportion of successful observations to the failed observations as opposed to the definition of probability as the ratio of success to total observations. In this study, the log of the observed odds was taken. 
+The dependent variable of interest is whether or not the child was verified for ECE eligibility by the deadline outlined by the Louisana Department of Education. The log odds of the outcome is denoted by $n_i$, which is reliant upon the treatment input along with relating variables that were also controlled for. It is important to note that log odds differentiates from probability which is the method of interpretation we are more familiar with. Odds represent the proportion of successful observations to the failed observations as opposed to the definition of probability as the ratio of success to total observations. In this study, the log of the observed odds was taken. 
 
 #### 2bii. What is the key independent variable (or, in some cases, variables)?
 
@@ -55,7 +55,7 @@ While there is no explicit outline of the null or alternative hypothesis, it can
 
 #### 2c. Does the model use any specific functional form (e.g., probit, log)? If yes, explain why.
 
-The model used by the authors employs a logit model. As the outcome of interest, verification, is reported as a dichotomous variable, use of any other model would not be logical. As we have discussed in class, there is little to no difference in using either probit or logit. The authors' use of the logit model implies that they are assuming that the error term is distributed logistically rather than being distributed normally. 
+The model used by the authors employs a logit model. As the outcome of interest, verification, is reported as a dichotomous variable, use of any other model would not be logical. As we have discussed in class, there is little to no difference in using either probit or logit. The authors' use of the logit rather a probit model implies that they are assuming that the error term is distributed logistically rather than being distributed normally. 
 
 #### 3. Endogeneity
 
@@ -95,7 +95,7 @@ To be statistically powerful, the data and accompanying model must be equipped t
 
 #### 6. Have the authors considered heterogeneous treatment effects?  (That is, have they considered whether the effect of the key independent variable(s) differs across sub-groups?)  Describe how they do or could address this possibility.
 
-To adequately draw conclusions while taking into account heterogeneous treatment effects, the authors' included two interaction variables, both of which investigate the impact of needing to verify for Head Start along with the treatment groups. The reasoning they outlined for inclusion of the interaction variables was "the verification process in New Orleans is more complicated for Head Start applicants and because this could be a particularly disadvantaged population." As Head Start applicants are eligible due to being below an income threshold, they are required to provide more information to verify their eligibility. Since it is a more thorough process, the expectation was that the effect of different communication methods could have a compounding impact on the subset of the population eligible for Head Start. For the population not eligible for Head Start, the inclusion of these variables will not have an impact on their log odds of eligibility as the interaction variable will be set to 0, nullifying the estimated coefficients B3 and B4. 
+To adequately draw conclusions while taking into account heterogeneous treatment effects, the authors' included two interaction variables, both of which investigate the impact of needing to verify for Head Start along with the treatment groups. The reasoning they outlined for inclusion of the interaction variables was "the verification process in New Orleans is more complicated for Head Start applicants and because this could be a particularly disadvantaged population." As Head Start applicants are eligible due to being below an income threshold, they are required to provide more information to verify their eligibility. Since it is a more thorough process, the expectation was that the effect of different communication methods could have a compounding impact on the subset of the population eligible for Head Start. For the population not eligible for Head Start, the inclusion of these variables will not have an impact on their log odds of eligibility as the interaction variable will be set to 0, nullifying the estimated coefficients $\beta_3$ and $\beta_4$. 
 
 #### 7. Are the results generalizable?
 
@@ -104,11 +104,11 @@ Throughout the paper, the authors go to great lengths to emphasize the specific 
 
 ## Part 2: Discuss a new research design
 
-#### Develop a hypothesis to test on a question related to the above article. This hypothesis must be different than the hypothesis tested in the paper discussed in part 1. (For example, if the paper covers the effect of income on high school graduation in Mexico, you cannot simply propose research on the effect of income on high school graduation in the U.S.) If you are in doubt, be sure to see me.
+#### Develop a hypothesis to test on a question related to the above article. This hypothesis must be different than the hypothesis tested in the paper discussed in part 1.
 
 #### 1. What is the analytical question?
 
-While the experiment shows that additional messages and increased use of novel mediums such as text messages can have a beneficial result on verification rates of low-income students for early childhood education, the treatment does not address the main obstacle of the verification process itself - the arduous process of bringing identification and proof of income documentation to specific locations at designated times. With other municipalities offering the ability to verify through digital communication, typically with photos of documents and via phone interview [need to find a reference to this], there's a precedent for more intuitive and less demanding verification processes. With this in mind, a follow-up experiment would be to see if individuals randomly selected to participate in a digital-only verification process were more likely to verify for ECE.
+While the experiment shows that additional messages and increased use of novel mediums such as text messages can have a beneficial result on verification rates of low-income students for early childhood education, the treatment does not address the main obstacle of the verification process itself - the arduous process of bringing identification and proof of income documentation to specific locations at designated times. With other municipalities offering the ability to verify through digital communication, typically with photos of documents and via phone interview, there's a precedent for more intuitive and less demanding verification processes. With this in mind, a follow-up experiment would be to see if individuals randomly selected to participate in a digital-only verification process were more likely to verify for ECE.
 
 #### 1a. Why is it important to answer this question?
 
@@ -130,7 +130,7 @@ The outcome, $n_i$, is the log odds of a child being verified given the forthcom
 
 The dependent variable remains the verification of students who are eligible for ECE programs their parents have applied for previously through the OneApp program. This dependent variable is a dichotomous variable, capturing only if the child is verified prior to the deadline. It will follow the traditional dichotomous variable structure, where children who are verified will be assigned a 1 while those who are not will be assigned a 0. 
 
-#### 1bii. What is the key independent variable (or, in some cases, variables)? [Please focus on no more than two independent variables.]
+#### 1bii. What is the key independent variable (or, in some cases, variables)?
 
 This experiment would largely follow the model specification of the previous trial. The independent variables would include demographic information, but would not feature the treatment groups nor the Head Start interaction variable for them. By an extension of the author's analysis, Head Start would share an interaction variable with the treatment variable to control how applying for Head Start, a more arduous process, might affect the verification rates of those randomly assigned to the digital verification process. With this new approach considered, this experiment would also take into account two new variables to measure capacity and past experience with the system.
 
@@ -175,6 +175,7 @@ Given the experiment's similar specification to the previous iteration, the prec
 Without a temporal component to the model, it is improbable to consider autocorrelation as a threat to the validity of the model's reported standard errors. Heteroscedasticity is also likely to not influence the model, as there's no prevalent reason to assume the errors would not be relatively uniformly distributed. As noted above, multicollinearity is a potential issue with multiple variables loosely capturing similar information regarding income. This reality will not cause bias in the model, but rather inflate the variance a bit. With the sufficient sample size and likely sufficient variance in the other independent variables, this effect is worth noting, but not likely to invalidate or deteriorate the quality of the results.
 
 #### 4b. Is the test statistically powerful?  What are the implications of your answer to this question for how you will interpret your results?
+
 The test would likely be just as, if not more so, powerful than the previous experiment. With only two treatment groups instead of three, each subset of the sample would be better represented in terms of the size of N. A higher power model would allow for more fine-tuned interpretation of results, particularly correctly rejecting or failing to reject the null hypothesis based on estimated coefficients that may be closer to zero, but still statistically significant, which is easier to determine in sufficiently high-power models.
 
 #### 5. Do you expect the treatment effects to be heterogeneous?  (That is, will the effect of the key independent variable differ across sub-groups?)  Describe how to address this possibility.
