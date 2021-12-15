@@ -53,7 +53,7 @@ The primary independent variable of interest was a set of three treatments perta
 
 #### 2biii. What are the null and alternative hypotheses?
 
-While there is no explicit outline of the null or alternative hypothesis, it can be derived that the null hypothesis is that the novel forms of communication do not make a meaningful difference to odds of verification. In this scenario, the alternative hypothesis is that either text messages or the personalization of these text messages will have some form of impact on the odds of verification. In statistical terminology, the null hypothesis is that $\beta = 0$ while the alternative hypothesis is that $\beta \ne 0$. 
+While there is no explicit outline of the null or alternative hypothesis, it can be derived that the null hypothesis is that the novel forms of communication do not make a meaningful difference to odds of verification. In this scenario, the alternative hypothesis is that either text messages or the personalization of these text messages will have some form of impact on the odds of verification. In statistical terminology, the null hypothesis is that $\beta_1 = \beta_2 = \beta_4 = \beta_5 = 0$ while the alternative hypothesis is that $\beta_1,  \beta_2, \beta_4, \beta_5 \ne 0$. 
 
 #### 2c. Does the model use any specific functional form (e.g., probit, log)? If yes, explain why.
 
