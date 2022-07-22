@@ -33,7 +33,7 @@ def get_comments(reddit=praw.Reddit, submission_id=''):
 def get_game_data(reddit=praw.Reddit, submission_id=''):
     '''
     Returns a tuple of the submission_id, home team, home team score, away team, away team score, winner, 
-    combined score, difference in final score, predicted winner, predicted difference, and predicted over/under
+    combined score, difference in final score, predicted winner, predicted difference, and predicted over/under, and the record of the teams prior to the game.
 
     Parameters
     --- --- --- 
@@ -43,7 +43,6 @@ def get_game_data(reddit=praw.Reddit, submission_id=''):
     submission_id: string
         The unique id associated with the reddit thread of interest. Gain by accessed by the reddit API or extracted from the thread's permalink.
     '''
-
 
     submission = reddit.submission(submission_id)
     
@@ -77,6 +76,29 @@ def get_game_data(reddit=praw.Reddit, submission_id=''):
         pred_diff = odds_list[1][1:]
         pred_ou = odds_list[3]
 
-    gamethread_data = (submission_id, home_team, home_score, away_team, away_score, winner, combined_score, diff, pred_winner, pred_diff, pred_ou)
+
+
+    # drop "Game Thread: "
+    title = submission.title[13:]
+
+    # split into two teams and their records
+    text_list = title.split(" at ")
+ 
+
+    # find the wins and losses by searching for text on each side of the parantheses and dash
+    away_team_wins = int(text_list[0][text_list[0].find(start:='(')+len(start):text_list[0].find('-')])
+    away_team_losses = int(text_list[0][text_list[0].find(start:='-')+len(start):text_list[0].find(')')])
+    away_record = " (" + str(away_team_wins) + "-" + str(away_team_losses) + ")"
+    away_team_full = text_list[0].replace(away_record, "")
+    # find the wins and losses by searching for text on each side of the parantheses and dash
+    home_team_wins = int(text_list[1][text_list[1].find(start:='(')+len(start):text_list[1].find('-')])
+    home_team_losses = int(text_list[1][text_list[1].find(start:='-')+len(start):text_list[1].find(')')])
+    home_record = " (" + str(home_team_wins) + "-" + str(home_team_losses) + ")"
+    home_team_full = text_list[1].replace(home_record, "")
+
+
+    gamethread_data = (submission_id, title, home_team_full, home_team_wins, home_team_losses,  
+                       away_team_full, away_team_wins, away_team_losses, 
+                       home_score, away_score, winner, combined_score, diff, pred_winner, pred_diff, pred_ou)
 
     return gamethread_data
