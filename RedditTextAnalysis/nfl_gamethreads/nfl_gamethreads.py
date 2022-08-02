@@ -1,36 +1,55 @@
+from statistics import stdev
 import pandas as pd
 import numpy as np
 import praw
 from bs4 import BeautifulSoup
+from textblob import TextBlob
+import datetime
 
 
-def get_comments(reddit=praw.Reddit, submission_id=''):
+### PRE-PROCESSING FUNCTIONS ### 
+
+## TODO: Invert to assign "Week" column based on fitting between two dates
+def filter_by_week(gamethread_df: pd.DataFrame, week: int):
     '''
-    Returns a list of comments from the specified reddit thread associated with the submission_id parameter.
-    The list includes the comment's author, content, upvotes, downvotes, created time, and author's flair.
+    Returns the provided dataframe filtered down to the provided week of NFL games.
 
     Parameters
-    --- --- --- 
-    reddit: praw.Reddit instance
-        The pre-created reddit instance set up by user. Only read rights required.
+    --- --- ---
+    gamethread_df: pd.DataFrame
+        The dataframe of NFL game data to be filtered.
 
-    submission_id: string
-        The unique id associated with the reddit thread of interest. Gain by accessed by the reddit API or extracted from the thread's permalink.
+    week: int
+        The week in the NFL season to query the dataset by.    
     '''
 
-    # create a praw.Submission object based on the subject_id to access comments
-    submission = reddit.submission(submission_id)
-    
-    # ignore all of the "Load More Comment" prompts to return entire comment tree
-    submission.comments.replace_more(limit=None)
+    nfl_weeks = pd.read_csv('nfl_week_dates.csv', index_col='week')
 
-    # store variables of interest in a list and return it
-    comments_list = [(submission_id, (str(comment.author), str(comment.body), int(comment.ups), int(comment.downs), comment.created_utc, str(comment.author_flair_text))) for comment in submission.comments.list()]
+    # store string of dates, transform to int (gets rid of leading 0)
+    start = nfl_weeks.loc[week].at['week_start']
+    end = nfl_weeks.loc[week].at['week_end']
 
-    return comments_list
+    start_y = int(start[0:4])
+    start_m = int(start[5:7])
+    start_d = int(start[8:10])
+
+    end_y = int(end[0:4])
+    end_m = int(end[5:7])
+    end_d = int(end[8:10])
+
+    # store as date and use dates to query the dataframe provided
+    start_date = datetime.date(start_y, start_m, start_d)
+    end_date = datetime.date(end_y, end_m, end_d)
+
+    gamethread_df = gamethread_df.query("date >= @start_date and date <= @end_date").copy()
+
+    return gamethread_df
 
 
-def get_game_data(reddit=praw.Reddit, submission_id=''):
+### GAMETHREAD DATA FUNCTIONS ###
+
+
+def get_game_data(reddit: praw.Reddit, submission_id: str):
     '''
     Returns a tuple of the submission_id, home team, home team score, away team, away team score, winner, 
     combined score, difference in final score, predicted winner, predicted difference, and predicted over/under, and the record of the teams prior to the game.
@@ -76,29 +95,130 @@ def get_game_data(reddit=praw.Reddit, submission_id=''):
         pred_diff = odds_list[1][1:]
         pred_ou = odds_list[3]
 
-
-
     # drop "Game Thread: "
     title = submission.title[13:]
 
     # split into two teams and their records
     text_list = title.split(" at ")
- 
-
-    # find the wins and losses by searching for text on each side of the parantheses and dash
-    away_team_wins = int(text_list[0][text_list[0].find(start:='(')+len(start):text_list[0].find('-')])
-    away_team_losses = int(text_list[0][text_list[0].find(start:='-')+len(start):text_list[0].find(')')])
-    away_record = " (" + str(away_team_wins) + "-" + str(away_team_losses) + ")"
-    away_team_full = text_list[0].replace(away_record, "")
-    # find the wins and losses by searching for text on each side of the parantheses and dash
-    home_team_wins = int(text_list[1][text_list[1].find(start:='(')+len(start):text_list[1].find('-')])
-    home_team_losses = int(text_list[1][text_list[1].find(start:='-')+len(start):text_list[1].find(')')])
-    home_record = " (" + str(home_team_wins) + "-" + str(home_team_losses) + ")"
-    home_team_full = text_list[1].replace(home_record, "")
-
-
-    gamethread_data = (submission_id, title, home_team_full, home_team_wins, home_team_losses,  
-                       away_team_full, away_team_wins, away_team_losses, 
+    
+    # split text on each team for record and full name
+    away_team_wins, away_team_losses, away_team_ties, away_team_full = get_team_record(text_list[0])
+    home_team_wins, home_team_losses, home_team_ties, home_team_full = get_team_record(text_list[1])
+    
+    # collect all and return
+    gamethread_data = (submission_id, title, home_team_full, home_team_wins, home_team_losses, home_team_ties, 
+                       away_team_full, away_team_wins, away_team_losses, away_team_ties,
                        home_score, away_score, winner, combined_score, diff, pred_winner, pred_diff, pred_ou)
 
     return gamethread_data
+
+
+
+def get_team_record(team_string: str):
+    '''
+    A helper function that takes in the gamethread title split for the home and away team
+    Returns each component of the team's record and their full name
+    '''
+
+    # split the name and record, then remove the parantheses
+    team_list = team_string.split("(")
+    record_list = team_list[1][:-1].split("-")
+
+    wins = record_list[0]
+    losses = record_list[1]
+    if len(record_list) == 3:
+        ties = record_list[2]
+    else:
+        ties = 0
+
+    # store the name minus trailing whitespace
+    team_full = team_list[0][:-1]
+
+    return wins, losses, ties, team_full
+
+
+### COMMENT FUNCTIONS ### 
+
+
+def get_comments(reddit: praw.Reddit, submission_id: str, comments_only:bool):
+    '''
+    If comments_only = True, returns a list of only the comment body text for downstream text analysis
+    If comments_only = False, the returned list is a list of tuples that includes the comment's author, content, upvotes, downvotes, created time, and author's flair.
+    
+    Parameters
+    --- --- --- 
+    reddit: praw.Reddit instance
+        The pre-created reddit instance set up by user. Only read rights required.
+
+    submission_id: string
+        The unique id associated with the reddit thread of interest. Gain by accessed by the reddit API or extracted from the thread's permalink.
+
+    comments_onlt: bool
+        Determines the contents of the list to be returned, either only the comment body text or additional details
+    '''
+
+    # create a praw.Submission object based on the subject_id to access comments
+    submission = reddit.submission(submission_id)
+    
+    # ignore all of the "Load More Comment" prompts to return entire comment tree
+    submission.comments.replace_more(limit=None)
+
+    if comments_only == False: # store variables of interest with comments in list of tuples
+        comments_list = [(submission_id, str(comment.author), str(comment.body), int(comment.ups), comment.created_utc, str(comment.author_flair_text)) for comment in submission.comments.list()]
+
+    else: # return only list of comments
+        comments_list = [str(comment.body) for comment in submission.comments.list()]
+
+    return comments_list
+
+
+def analyze_text_df(text_df: pd.DataFrame, text_column: str):
+    '''
+    Takes in a dataframe with a 'column of text and returns the dataframe with two new appended columns that include the
+    polatirty and subjectivity of each value of text from the Textblob package.
+
+    Intended for use on dataframe of comments for analysis at the level of a single corpus.
+    For aggregating text into a single set of statistics, see analyze_submission().
+
+    Parameters
+    --- --- ---
+    text_df: pandas DataFrame
+        Dataframe with at a minimum, a column of text to be analyzed
+
+    text_column: str
+        Name of the column in which text to be analyzed is stored
+    '''
+    text_df["polarity"] =  get_text_analysis(text_df[text_column], 'polarity')
+    text_df["subjectivity"] = get_text_analysis(text_df[text_column], 'subjectivity')
+
+    return text_df
+
+
+## TODO: instead of needing to gather all the comments just to analyze, need to instead first store all comments elsewhere, and then run just the aggregation process.
+## Once all comments are stored in a SQL db, won't need to use this wrapper function and instead will query the relevant comments by submission id 
+def analyze_submission(reddit: praw.Reddit, submission_id: str):
+    '''
+    Returns average polarity and subjectivity of the corpus of comments for each submission id
+    '''
+    print(submission_id)
+    comments_list = get_comments(reddit, submission_id, comments_only=True)
+ 
+    polarity_list = get_text_analysis(comments_list, 'polarity')
+    subjectivity_list = get_text_analysis(comments_list, 'subjectivity')
+
+
+    return np.mean(polarity_list), np.mean(subjectivity_list)
+
+
+def get_text_analysis(comments_list: list, metric: str):
+    '''
+    Helper function that takes a list of text and a desired metric and returns a list of results for sentiment analysis
+    '''
+    if metric == 'polarity':
+        sentiment_list = [TextBlob(each).sentiment.polarity for each in comments_list]
+
+    if metric == 'subjectivity':
+        sentiment_list = [TextBlob(each).sentiment.subjectivity for each in comments_list]
+
+    return sentiment_list
+

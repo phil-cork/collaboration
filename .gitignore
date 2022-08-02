@@ -39,3 +39,6 @@ vignettes/*.pdf
 .Renviron
 
 .DS_Store
+RedditTextAnalysis/client_secret.txt
+.gitignore
+RedditTextAnalysis/pw.txt
