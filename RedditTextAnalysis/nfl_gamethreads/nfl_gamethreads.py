@@ -1,3 +1,4 @@
+from operator import index
 from statistics import stdev
 import pandas as pd
 import numpy as np
@@ -7,49 +8,88 @@ from textblob import TextBlob
 import datetime
 
 
-### PRE-PROCESSING FUNCTIONS ### 
 
-## TODO: Invert to assign "Week" column based on fitting between two dates
-def filter_by_week(gamethread_df: pd.DataFrame, week: int):
-    '''
-    Returns the provided dataframe filtered down to the provided week of NFL games.
+### DATA COLLECTION FUNCTION ###
 
-    Parameters
-    --- --- ---
-    gamethread_df: pd.DataFrame
-        The dataframe of NFL game data to be filtered.
+def get_submissions(redditor, sub_limit:int) -> list:
+    # initialize a new list for storing gamethread data
+    submission_list = []
 
-    week: int
-        The week in the NFL season to query the dataset by.    
-    '''
+    # for each gamethread, store the id, name, and date
+    for submission in redditor.submissions.new(limit=sub_limit):
+        submission_list.append((str(submission.id), str(submission.title), submission.created_utc))
 
-    nfl_weeks = pd.read_csv('nfl_week_dates.csv', index_col='week')
+    return submission_list
 
-    # store string of dates, transform to int (gets rid of leading 0)
-    start = nfl_weeks.loc[week].at['week_start']
-    end = nfl_weeks.loc[week].at['week_end']
 
-    start_y = int(start[0:4])
-    start_m = int(start[5:7])
-    start_d = int(start[8:10])
 
-    end_y = int(end[0:4])
-    end_m = int(end[5:7])
-    end_d = int(end[8:10])
+### MAIN GAMETHREAD FUNCTION ###
 
-    # store as date and use dates to query the dataframe provided
-    start_date = datetime.date(start_y, start_m, start_d)
-    end_date = datetime.date(end_y, end_m, end_d)
+def build_gamethread_df(reddit:praw.Reddit, submission_list:list):
+    
+    gamethread_df = pd.DataFrame(submission_list, columns=['id','title','date'])
 
-    gamethread_df = gamethread_df.query("date >= @start_date and date <= @end_date").copy()
+    # transform the date column from UTC timestamp to only the date
+    gamethread_df['date'] = gamethread_df['date'].apply(lambda utc_entry: datetime.datetime.utcfromtimestamp(utc_entry))
+    gamethread_df['date'] = gamethread_df['date'].dt.date
+
+    # remove pre and post game threads, the superbowl halftime discussion, and the pro bowl discussion
+    gamethread_df = gamethread_df[gamethread_df["title"].str.contains("Pre|Post|Halftime|Pro Bowl|Super Bowl|RedZone")==False].copy()
+    gamethread_df.reset_index(inplace=True, drop=True)
+
+    # append column for which NFL Week each game's date falls into
+    gamethread_df = add_nfl_weeks(gamethread_df)
+
+    # use text from the gamethread's content to get game-level details like teams and score
+    gamedata = [scrape_game_data(reddit, each_id) for each_id in gamethread_df['id']]
+    gamedata_df = pd.DataFrame(gamedata, columns=['id', 'home_team_full', 'home_team_wins', 'home_team_losses', 'home_team_ties', 
+                       'away_team_full', 'away_team_wins', 'away_team_losses', 'away_team_ties',
+                       'home_score', 'away_score', 'winner', 'combined_score', 'diff', 'pred_winner', 'pred_diff', 'pred_ou'])
+    
+    gamethread_df = gamethread_df.merge(gamedata_df, on='id')
 
     return gamethread_df
 
 
-### GAMETHREAD DATA FUNCTIONS ###
+
+### GAMETHREAD HELPER FUNCTIONS ### 
 
 
-def get_game_data(reddit: praw.Reddit, submission_id: str):
+def add_nfl_weeks(gamethread_df:pd.DataFrame):
+    '''
+    Takes in a DataFrame that includes at a minimum a "date" and appends the NFL Week based on the date provided.
+    '''
+    nfl_weeks = pd.read_csv('nfl_week_dates.csv', index_col='week')
+    week_list = [i+1 for i in range(18)]
+
+    all_gamethreads_df = pd.DataFrame(columns=gamethread_df.columns)
+    all_gamethreads_df['week'] = 0
+
+    for week in week_list:
+        start = nfl_weeks.loc[week].at['week_start']
+        end = nfl_weeks.loc[week].at['week_end']
+
+        start_y = int(start[0:4])
+        start_m = int(start[5:7])
+        start_d = int(start[8:10])
+
+        end_y = int(end[0:4])
+        end_m = int(end[5:7])
+        end_d = int(end[8:10])
+
+        # store as date and use dates to query the dataframe provided
+        start_date = datetime.date(start_y, start_m, start_d)
+        end_date = datetime.date(end_y, end_m, end_d)
+
+        gamethread_df_week = gamethread_df.query("date >= @start_date and date <= @end_date").copy()
+        gamethread_df_week['week'] = week
+
+        all_gamethreads_df= all_gamethreads_df.append(gamethread_df_week, ignore_index=True)
+
+    return all_gamethreads_df
+
+
+def scrape_game_data(reddit: praw.Reddit, submission_id: str):
     '''
     Returns a tuple of the submission_id, home team, home team score, away team, away team score, winner, 
     combined score, difference in final score, predicted winner, predicted difference, and predicted over/under, and the record of the teams prior to the game.
@@ -106,7 +146,7 @@ def get_game_data(reddit: praw.Reddit, submission_id: str):
     home_team_wins, home_team_losses, home_team_ties, home_team_full = get_team_record(text_list[1])
     
     # collect all and return
-    gamethread_data = (submission_id, title, home_team_full, home_team_wins, home_team_losses, home_team_ties, 
+    gamethread_data = (submission_id, home_team_full, home_team_wins, home_team_losses, home_team_ties, 
                        away_team_full, away_team_wins, away_team_losses, away_team_ties,
                        home_score, away_score, winner, combined_score, diff, pred_winner, pred_diff, pred_ou)
 
@@ -135,6 +175,7 @@ def get_team_record(team_string: str):
     team_full = team_list[0][:-1]
 
     return wins, losses, ties, team_full
+
 
 
 ### COMMENT FUNCTIONS ### 
@@ -172,7 +213,7 @@ def get_comments(reddit: praw.Reddit, submission_id: str, comments_only:bool):
     return comments_list
 
 
-def analyze_text_df(text_df: pd.DataFrame, text_column: str):
+def analyze_text(text_df: pd.DataFrame, text_column: str):
     '''
     Takes in a dataframe with a 'column of text and returns the dataframe with two new appended columns that include the
     polatirty and subjectivity of each value of text from the Textblob package.
@@ -188,37 +229,8 @@ def analyze_text_df(text_df: pd.DataFrame, text_column: str):
     text_column: str
         Name of the column in which text to be analyzed is stored
     '''
-    text_df["polarity"] =  get_text_analysis(text_df[text_column], 'polarity')
-    text_df["subjectivity"] = get_text_analysis(text_df[text_column], 'subjectivity')
+    text_df["polarity"] =  [TextBlob(each).sentiment.polarity for each in text_df[text_column]]
+    text_df["subjectivity"] = [TextBlob(each).sentiment.subjectivity for each in text_df[text_column]]
 
     return text_df
-
-
-## TODO: instead of needing to gather all the comments just to analyze, need to instead first store all comments elsewhere, and then run just the aggregation process.
-## Once all comments are stored in a SQL db, won't need to use this wrapper function and instead will query the relevant comments by submission id 
-def analyze_submission(reddit: praw.Reddit, submission_id: str):
-    '''
-    Returns average polarity and subjectivity of the corpus of comments for each submission id
-    '''
-    print(submission_id)
-    comments_list = get_comments(reddit, submission_id, comments_only=True)
- 
-    polarity_list = get_text_analysis(comments_list, 'polarity')
-    subjectivity_list = get_text_analysis(comments_list, 'subjectivity')
-
-
-    return np.mean(polarity_list), np.mean(subjectivity_list)
-
-
-def get_text_analysis(comments_list: list, metric: str):
-    '''
-    Helper function that takes a list of text and a desired metric and returns a list of results for sentiment analysis
-    '''
-    if metric == 'polarity':
-        sentiment_list = [TextBlob(each).sentiment.polarity for each in comments_list]
-
-    if metric == 'subjectivity':
-        sentiment_list = [TextBlob(each).sentiment.subjectivity for each in comments_list]
-
-    return sentiment_list
 
