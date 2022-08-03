@@ -12,6 +12,10 @@ import datetime
 ### DATA COLLECTION FUNCTION ###
 
 def get_submissions(redditor, sub_limit:int) -> list:
+    '''
+    Takes in a reddit user and returns a list of tuples that include the submission id, title, and time/date created for 
+    the number of posts up to the provided limit (max 1000 per reddit's api).
+    '''
     # initialize a new list for storing gamethread data
     submission_list = []
 
@@ -26,6 +30,16 @@ def get_submissions(redditor, sub_limit:int) -> list:
 ### MAIN GAMETHREAD FUNCTION ###
 
 def build_gamethread_df(reddit:praw.Reddit, submission_list:list):
+    '''
+    Takes in a list of reddit submissions that represent gamethread posts from r/nfl and returns a dataframe of
+    scraped game details and other variables for analysis.
+
+    Parameters:
+        reddit: 
+            A reddit api instance from the praw package
+        submission_list: list
+            A list of tuples of the submissions. The output of get_submissions().
+    '''
     
     gamethread_df = pd.DataFrame(submission_list, columns=['id','title','date'])
 
@@ -57,7 +71,7 @@ def build_gamethread_df(reddit:praw.Reddit, submission_list:list):
 
 def add_nfl_weeks(gamethread_df:pd.DataFrame):
     '''
-    Takes in a DataFrame that includes at a minimum a "date" and appends the NFL Week based on the date provided.
+    Takes in a DataFrame that includes at minimum a "date" column and appends the NFL Week based on the date provided.
     '''
     nfl_weeks = pd.read_csv('nfl_week_dates.csv', index_col='week')
     week_list = [i+1 for i in range(18)]
@@ -93,14 +107,6 @@ def scrape_game_data(reddit: praw.Reddit, submission_id: str):
     '''
     Returns a tuple of the submission_id, home team, home team score, away team, away team score, winner, 
     combined score, difference in final score, predicted winner, predicted difference, and predicted over/under, and the record of the teams prior to the game.
-
-    Parameters
-    --- --- --- 
-    reddit: praw.Reddit instance
-        The pre-created reddit instance set up by user. Only read rights required.
-
-    submission_id: string
-        The unique id associated with the reddit thread of interest. Gain by accessed by the reddit API or extracted from the thread's permalink.
     '''
 
     submission = reddit.submission(submission_id)
