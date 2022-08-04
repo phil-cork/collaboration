@@ -29,7 +29,7 @@ def get_submissions(redditor, sub_limit:int) -> list:
 
 ### MAIN GAMETHREAD FUNCTION ###
 
-def build_gamethread_df(reddit:praw.Reddit, submission_list:list):
+def build_gamethread_df(reddit:praw.Reddit, submission_list:list, season: int):
     '''
     Takes in a list of reddit submissions that represent gamethread posts from r/nfl and returns a dataframe of
     scraped game details and other variables for analysis.
@@ -41,7 +41,7 @@ def build_gamethread_df(reddit:praw.Reddit, submission_list:list):
             A list of tuples of the submissions. The output of get_submissions().
     '''
     
-    gamethread_df = pd.DataFrame(submission_list, columns=['id','title','date'])
+    gamethread_df = pd.DataFrame(submission_list, columns=['submission_id','title','date'])
 
     # transform the date column from UTC timestamp to only the date
     gamethread_df['date'] = gamethread_df['date'].apply(lambda utc_entry: datetime.datetime.utcfromtimestamp(utc_entry))
@@ -52,15 +52,15 @@ def build_gamethread_df(reddit:praw.Reddit, submission_list:list):
     gamethread_df.reset_index(inplace=True, drop=True)
 
     # append column for which NFL Week each game's date falls into
-    gamethread_df = add_nfl_weeks(gamethread_df)
+    gamethread_df = add_nfl_weeks(gamethread_df, season)
 
     # use text from the gamethread's content to get game-level details like teams and score
-    gamedata = [scrape_game_data(reddit, each_id) for each_id in gamethread_df['id']]
-    gamedata_df = pd.DataFrame(gamedata, columns=['id', 'home_team_full', 'home_team_wins', 'home_team_losses', 'home_team_ties', 
-                       'away_team_full', 'away_team_wins', 'away_team_losses', 'away_team_ties',
-                       'home_score', 'away_score', 'winner', 'combined_score', 'diff', 'pred_winner', 'pred_diff', 'pred_ou'])
-    
-    gamethread_df = gamethread_df.merge(gamedata_df, on='id')
+    gamedata = [scrape_game_data(reddit, each_id) for each_id in gamethread_df['submission_id']]
+    gamedata_df = pd.DataFrame(gamedata, columns=['submission_id', 'home_team', 'home_team_wins', 'home_team_losses', 'home_team_ties', 
+                       'away_team', 'away_team_wins', 'away_team_losses', 'away_team_ties',
+                       'home_score', 'away_score', 'winner', 'combined_score', 'score_difference', 'predicted_winner', 'predicted_difference', 'predicted_over_under'])
+
+    gamethread_df = gamethread_df.merge(gamedata_df, on='submission_id')
 
     return gamethread_df
 
@@ -69,7 +69,7 @@ def build_gamethread_df(reddit:praw.Reddit, submission_list:list):
 ### GAMETHREAD HELPER FUNCTIONS ### 
 
 
-def add_nfl_weeks(gamethread_df:pd.DataFrame):
+def add_nfl_weeks(gamethread_df:pd.DataFrame, season:int):
     '''
     Takes in a DataFrame that includes at minimum a "date" column and appends the NFL Week based on the date provided.
     '''
@@ -98,7 +98,9 @@ def add_nfl_weeks(gamethread_df:pd.DataFrame):
         gamethread_df_week = gamethread_df.query("date >= @start_date and date <= @end_date").copy()
         gamethread_df_week['week'] = week
 
-        all_gamethreads_df= all_gamethreads_df.append(gamethread_df_week, ignore_index=True)
+        all_gamethreads_df = all_gamethreads_df.append(gamethread_df_week, ignore_index=True)
+    
+    all_gamethreads_df['season'] = season
 
     return all_gamethreads_df
 
@@ -186,8 +188,22 @@ def get_team_record(team_string: str):
 
 ### COMMENT FUNCTIONS ### 
 
+def build_weekly_comments_df(gamethread_df: pd.DataFrame, week: int,
+                             reddit:praw.Reddit, sub_id_col='id', week_col='week') -> pd.DataFrame:
 
-def get_comments(reddit: praw.Reddit, submission_id: str, comments_only:bool):
+    gt_week_df = gamethread_df[gamethread_df[week_col]==week]
+    comments_list = []
+    
+    for each_id in gt_week_df[sub_id_col]:
+        submission_comments = get_comments(reddit, each_id, comments_only=False)
+        comments_list.append(submission_comments)
+    
+    comments_df = pd.DataFrame(comments_list, columns=['comment_id', 'submission_id', 'author', 'body', 'upvotes', 'utc_time', 'author_flair'])
+
+    return comments_df
+
+
+def get_comments(reddit: praw.Reddit, submission_id: str):
     '''
     If comments_only = True, returns a list of only the comment body text for downstream text analysis
     If comments_only = False, the returned list is a list of tuples that includes the comment's author, content, upvotes, downvotes, created time, and author's flair.
@@ -208,13 +224,12 @@ def get_comments(reddit: praw.Reddit, submission_id: str, comments_only:bool):
     submission = reddit.submission(submission_id)
     
     # ignore all of the "Load More Comment" prompts to return entire comment tree
-    submission.comments.replace_more(limit=None)
+    
+    submission.comments.replace_more(limit=None, threshold=1)
+    print("Comments: " + str(len(submission.comments.list())))
 
-    if comments_only == False: # store variables of interest with comments in list of tuples
-        comments_list = [(submission_id, str(comment.author), str(comment.body), int(comment.ups), comment.created_utc, str(comment.author_flair_text)) for comment in submission.comments.list()]
 
-    else: # return only list of comments
-        comments_list = [str(comment.body) for comment in submission.comments.list()]
+    comments_list = [(comment.id, submission_id, str(comment.author), str(comment.body), int(comment.ups), comment.created_utc, str(comment.author_flair_text)) for comment in submission.comments.list()]
 
     return comments_list
 
