@@ -1,0 +1,214 @@
+,id,title,date,week,home_team_full,home_team_wins,home_team_losses,home_team_ties,away_team_full,away_team_wins,away_team_losses,away_team_ties,home_score,away_score,winner,combined_score,diff,pred_winner,pred_diff,pred_ou
+0,pwto53,Game Thread: Philadelphia Eagles (1-1) at Dallas Cowboys (1-1),2021-09-27,3,Dallas Cowboys,1,1,0,Philadelphia Eagles,1,1,0,41,21,Cowboys,62,20,Dallas,3.5,51.5
+1,q1ih03,Game Thread: Las Vegas Raiders (3-0) at Los Angeles Chargers (2-1),2021-10-04,4,Los Angeles Chargers,2,1,0,Las Vegas Raiders,3,0,0,28,14,Chargers,42,14,Los Angeles,3.0,51.5
+2,q0tsv6,Game Thread: Tampa Bay Buccaneers (2-1) at New England Patriots (1-2),2021-10-03,4,New England Patriots,1,2,0,Tampa Bay Buccaneers,2,1,0,17,19,Buccaneers,36,2,New England,7.0,49.5
+3,q0pdqs,Game Thread: Baltimore Ravens (2-1) at Denver Broncos (3-0),2021-10-03,4,Denver Broncos,3,0,0,Baltimore Ravens,2,1,0,7,23,Ravens,30,16,Denver,1.0,44.0
+4,q0pdpz,Game Thread: Pittsburgh Steelers (1-2) at Green Bay Packers (2-1),2021-10-03,4,Green Bay Packers,2,1,0,Pittsburgh Steelers,1,2,0,27,17,Packers,44,10,Green Bay,6.5,45.5
+5,q0ozmb,Game Thread: Arizona Cardinals (3-0) at Los Angeles Rams (3-0),2021-10-03,4,Los Angeles Rams,3,0,0,Arizona Cardinals,3,0,0,20,37,Cardinals,57,17,Los Angeles,4.0,54.5
+6,q0ozkz,Game Thread: Seattle Seahawks (1-2) at San Francisco 49ers (2-1),2021-10-03,4,San Francisco 49ers,2,1,0,Seattle Seahawks,1,2,0,21,28,Seahawks,49,7,San Francisco,2.5,52.0
+7,q0l91z,Game Thread: Washington Football Team (1-2) at Atlanta Falcons (1-2),2021-10-03,4,Atlanta Falcons,1,2,0,Washington Football Team,1,2,0,30,34,Football Team,64,4,Atlanta,1.5,47.5
+8,q0l90u,Game Thread: Indianapolis Colts (0-3) at Miami Dolphins (1-2),2021-10-03,4,Miami Dolphins,1,2,0,Indianapolis Colts,0,3,0,17,27,Colts,44,10,Miami,2.5,42.5
+9,q0l8z8,Game Thread: Houston Texans (1-2) at Buffalo Bills (2-1),2021-10-03,4,Buffalo Bills,2,1,0,Houston Texans,1,2,0,40,0,Bills,40,40,Buffalo,17.5,47.0
+10,q0l8xd,Game Thread: Detroit Lions (0-3) at Chicago Bears (1-2),2021-10-03,4,Chicago Bears,1,2,0,Detroit Lions,0,3,0,24,14,Bears,38,10,Chicago,3.0,41.5
+11,q0l8vz,Game Thread: Cleveland Browns (2-1) at Minnesota Vikings (1-2),2021-10-03,4,Minnesota Vikings,1,2,0,Cleveland Browns,2,1,0,7,14,Browns,21,7,Minnesota,2.0,51.5
+12,q0l8ug,Game Thread: New York Giants (0-3) at New Orleans Saints (2-1),2021-10-03,4,New Orleans Saints,2,1,0,New York Giants,0,3,0,21,27,Giants,48,6,New Orleans,7.0,42.0
+13,q0l8tc,Game Thread: Carolina Panthers (3-0) at Dallas Cowboys (2-1),2021-10-03,4,Dallas Cowboys,2,1,0,Carolina Panthers,3,0,0,36,28,Cowboys,64,8,Dallas,4.0,51.5
+14,q0l8rx,Game Thread: Kansas City Chiefs (1-2) at Philadelphia Eagles (1-2),2021-10-03,4,Philadelphia Eagles,1,2,0,Kansas City Chiefs,1,2,0,30,42,Chiefs,72,12,Philadelphia,6.5,54.5
+15,q0l8pu,Game Thread: Tennessee Titans (2-1) at New York Jets (0-3),2021-10-03,4,New York Jets,0,3,0,Tennessee Titans,2,1,0,27,24,Jets,51,3,New York,6.0,44.5
+16,pyvwyb,Game Thread: Jacksonville Jaguars (0-3) at Cincinnati Bengals (2-1),2021-09-30,4,Cincinnati Bengals,2,1,0,Jacksonville Jaguars,0,3,0,24,21,Bengals,45,3,Cincinnati,7.5,46.0
+17,q690nz,Game Thread: Indianapolis Colts (1-3) at Baltimore Ravens (3-1),2021-10-11,5,Baltimore Ravens,3,1,0,Indianapolis Colts,1,3,0,31,25,Ravens,56,6,Baltimore,7.0,46.0
+18,q5joto,Game Thread: Buffalo Bills (4-1) at Kansas City Chiefs (2-2),2021-10-10,5,Kansas City Chiefs,2,2,0,Buffalo Bills,4,1,0,20,38,Bills,58,18,Kansas City,3.0,57.0
+19,q5feog,Game Thread: New York Giants (1-3) at Dallas Cowboys (3-1),2021-10-10,5,Dallas Cowboys,3,1,0,New York Giants,1,3,0,44,20,Cowboys,64,24,Dallas,7.0,52.5
+20,q5femm,Game Thread: San Francisco 49ers (2-2) at Arizona Cardinals (4-0),2021-10-10,5,Arizona Cardinals,4,0,0,San Francisco 49ers,2,2,0,17,10,Cardinals,27,7,Arizona,5.5,48.5
+21,q5f0sd,Game Thread: Chicago Bears (2-2) at Las Vegas Raiders (3-1),2021-10-10,5,Las Vegas Raiders,3,1,0,Chicago Bears,2,2,0,9,20,Bears,29,11,Las Vegas,5.5,46.0
+22,q5f0rd,Game Thread: Cleveland Browns (3-1) at Los Angeles Chargers (3-1),2021-10-10,5,Los Angeles Chargers,3,1,0,Cleveland Browns,3,1,0,47,42,Chargers,89,5,Los Angeles,2.5,47.0
+23,q5bei6,Game Thread: Tennessee Titans (2-2) at Jacksonville Jaguars (0-4),2021-10-10,5,Jacksonville Jaguars,0,4,0,Tennessee Titans,2,2,0,19,37,Titans,56,18,Jacksonville,4.0,48.5
+24,q5behg,Game Thread: Philadelphia Eagles (1-3) at Carolina Panthers (3-1),2021-10-10,5,Carolina Panthers,3,1,0,Philadelphia Eagles,1,3,0,18,21,Eagles,39,3,Carolina,2.5,46.0
+25,q5beg9,Game Thread: Denver Broncos (3-1) at Pittsburgh Steelers (1-3),2021-10-10,5,Pittsburgh Steelers,1,3,0,Denver Broncos,3,1,0,27,19,Steelers,46,8,Pittsburgh,1.5,39.5
+26,q5beej,Game Thread: Green Bay Packers (3-1) at Cincinnati Bengals (3-1),2021-10-10,5,Cincinnati Bengals,3,1,0,Green Bay Packers,3,1,0,22,25,Packers,47,3,Cincinnati,2.0,50.0
+27,q5becx,Game Thread: Miami Dolphins (1-3) at Tampa Bay Buccaneers (3-1),2021-10-10,5,Tampa Bay Buccaneers,3,1,0,Miami Dolphins,1,3,0,45,17,Buccaneers,62,28,Tampa Bay,11.0,48.0
+28,q5bebn,Game Thread: New England Patriots (1-3) at Houston Texans (1-4),2021-10-10,5,Houston Texans,1,4,0,New England Patriots,1,3,0,22,25,Patriots,47,3,Houston,8.0,39.0
+29,q5be9t,Game Thread: New Orleans Saints (2-2) at Washington Football Team (2-2),2021-10-10,5,Washington Football Team,2,2,0,New Orleans Saints,2,2,0,22,33,Saints,55,11,Washington,2.5,43.5
+30,q5be8a,Game Thread: Detroit Lions (0-4) at Minnesota Vikings (1-3),2021-10-10,5,Minnesota Vikings,1,3,0,Detroit Lions,0,4,0,19,17,Vikings,36,2,Minnesota,10.0,49.5
+31,q57las,Game Thread: New York Jets (1-3) at Atlanta Falcons (1-3),2021-10-10,5,Atlanta Falcons,1,3,0,New York Jets,1,3,0,27,20,Falcons,47,7,Atlanta,3.0,45.5
+32,q3lrkm,Game Thread: Los Angeles Rams (3-1) at Seattle Seahawks (2-2),2021-10-07,5,Seattle Seahawks,2,2,0,Los Angeles Rams,3,1,0,17,26,Rams,43,9,Seattle,2.5,53.5
+33,qaz2fd,Game Thread: Buffalo Bills (4-1) at Tennessee Titans (3-2),2021-10-18,6,Tennessee Titans,3,2,0,Buffalo Bills,4,1,0,34,31,Titans,65,3,Tennessee,6.0,53.5
+34,qaapr1,Game Thread: Seattle Seahawks (2-3) at Pittsburgh Steelers (2-3),2021-10-17,6,Pittsburgh Steelers,2,3,0,Seattle Seahawks,2,3,0,23,20,Steelers,43,3,Pittsburgh,5.5,43.0
+35,qa6bmd,Game Thread: Dallas Cowboys (4-1) at New England Patriots (2-3),2021-10-17,6,New England Patriots,2,3,0,Dallas Cowboys,4,1,0,29,35,Cowboys,64,6,New England,3.5,50.5
+36,qa6bka,Game Thread: Las Vegas Raiders (3-2) at Denver Broncos (3-2),2021-10-17,6,Denver Broncos,3,2,0,Las Vegas Raiders,3,2,0,24,34,Raiders,58,10,Denver,5.0,45.0
+37,qa5wqx,Game Thread: Arizona Cardinals (5-0) at Cleveland Browns (3-2),2021-10-17,6,Cleveland Browns,3,2,0,Arizona Cardinals,5,0,0,14,37,Cardinals,51,23,Cleveland,3.0,48.0
+38,qa25ys,Game Thread: Cincinnati Bengals (3-2) at Detroit Lions (0-5),2021-10-17,6,Detroit Lions,0,5,0,Cincinnati Bengals,3,2,0,11,34,Bengals,45,23,Detroit,3.5,46.5
+39,qa25xt,Game Thread: Houston Texans (1-4) at Indianapolis Colts (1-4),2021-10-17,6,Indianapolis Colts,1,4,0,Houston Texans,1,4,0,31,3,Colts,34,28,Indianapolis,11.5,45.0
+40,qa25ws,Game Thread: Los Angeles Rams (4-1) at New York Giants (1-4),2021-10-17,6,New York Giants,1,4,0,Los Angeles Rams,4,1,0,11,38,Rams,49,27,New York,7.5,49.0
+41,qa25vv,Game Thread: Kansas City Chiefs (2-3) at Washington Football Team (2-3),2021-10-17,6,Washington Football Team,2,3,0,Kansas City Chiefs,2,3,0,13,31,Chiefs,44,18,Washington,6.5,54.0
+42,qa25ut,Game Thread: Minnesota Vikings (2-3) at Carolina Panthers (3-2),2021-10-17,6,Carolina Panthers,3,2,0,Minnesota Vikings,2,3,0,28,34,Vikings,62,6,Carolina,2.5,45.5
+43,qa25tl,Game Thread: Los Angeles Chargers (4-1) at Baltimore Ravens (4-1),2021-10-17,6,Baltimore Ravens,4,1,0,Los Angeles Chargers,4,1,0,34,6,Ravens,40,28,Baltimore,3.0,51.0
+44,qa25ri,Game Thread: Green Bay Packers (4-1) at Chicago Bears (3-2),2021-10-17,6,Chicago Bears,3,2,0,Green Bay Packers,4,1,0,14,24,Packers,38,10,Chicago,5.5,44.0
+45,q9y8p8,Game Thread: Miami Dolphins (1-4) at Jacksonville Jaguars (0-5),2021-10-17,6,Jacksonville Jaguars,0,5,0,Miami Dolphins,1,4,0,23,20,Jaguars,43,3,Jacksonville,1.5,47.0
+46,q8btug,Game Thread: Tampa Bay Buccaneers (4-1) at Philadelphia Eagles (2-3),2021-10-14,6,Philadelphia Eagles,2,3,0,Tampa Bay Buccaneers,4,1,0,22,28,Buccaneers,50,6,Philadelphia,7.0,53.0
+47,qftlza,Game Thread: New Orleans Saints (3-2) at Seattle Seahawks (2-4),2021-10-25,7,Seattle Seahawks,2,4,0,New Orleans Saints,3,2,0,13,10,Saints,23,3,Seattle,6.0,42.0
+48,qf4ang,Game Thread: Indianapolis Colts (2-4) at San Francisco 49ers (2-3),2021-10-24,7,San Francisco 49ers,2,3,0,Indianapolis Colts,2,4,0,30,18,Colts,48,12,San Francisco,3.5,41.5
+49,qezsbd,Game Thread: Chicago Bears (3-3) at Tampa Bay Buccaneers (5-1),2021-10-24,7,Tampa Bay Buccaneers,5,1,0,Chicago Bears,3,3,0,3,38,Buccaneers,41,35,Tampa Bay,12.0,47.0
+50,qezsaf,Game Thread: Houston Texans (1-5) at Arizona Cardinals (6-0),2021-10-24,7,Arizona Cardinals,6,0,0,Houston Texans,1,5,0,5,31,Cardinals,36,26,Arizona,20.0,47.5
+51,qezdd3,Game Thread: Philadelphia Eagles (2-4) at Las Vegas Raiders (4-2),2021-10-24,7,Las Vegas Raiders,4,2,0,Philadelphia Eagles,2,4,0,22,33,Raiders,55,11,Las Vegas,1.0,48.0
+52,qezdc1,Game Thread: Detroit Lions (0-6) at Los Angeles Rams (5-1),2021-10-24,7,Los Angeles Rams,5,1,0,Detroit Lions,0,6,0,19,28,Rams,47,9,Los Angeles,16.5,50.5
+53,qevm5k,Game Thread: Cincinnati Bengals (4-2) at Baltimore Ravens (5-1),2021-10-24,7,Baltimore Ravens,5,1,0,Cincinnati Bengals,4,2,0,17,41,Bengals,58,24,Baltimore,6.0,46.0
+54,qevm4a,Game Thread: Atlanta Falcons (2-3) at Miami Dolphins (1-5),2021-10-24,7,Miami Dolphins,1,5,0,Atlanta Falcons,2,3,0,28,27,Dolphins,55,1,Miami,1.5,47.5
+55,qevm2q,Game Thread: Washington Football Team (2-4) at Green Bay Packers (5-1),2021-10-24,7,Green Bay Packers,5,1,0,Washington Football Team,2,4,0,24,10,Packers,34,14,Green Bay,8.5,48.0
+56,qevm1r,Game Thread: Kansas City Chiefs (3-3) at Tennessee Titans (4-2),2021-10-24,7,Tennessee Titans,4,2,0,Kansas City Chiefs,3,3,0,27,3,Titans,30,24,Tennessee,4.0,59.0
+57,qevm0g,Game Thread: New York Jets (1-4) at New England Patriots (2-4),2021-10-24,7,New England Patriots,2,4,0,New York Jets,1,4,0,47,13,Patriots,60,34,New England,7.0,42.5
+58,qevlz5,Game Thread: Carolina Panthers (3-3) at New York Giants (1-5),2021-10-24,7,New York Giants,1,5,0,Carolina Panthers,3,3,0,25,3,Giants,28,22,New York,3.0,43.0
+59,qd4kcd,Game Thread: Denver Broncos (3-3) at Cleveland Browns (3-3),2021-10-21,7,Cleveland Browns,3,3,0,Denver Broncos,3,3,0,17,14,Browns,31,3,Cleveland,2.0,40.0
+60,qkr53y,Game Thread: New York Giants (2-5) at Kansas City Chiefs (3-4),2021-11-01,8,Kansas City Chiefs,3,4,0,New York Giants,2,5,0,17,20,Chiefs,37,3,Kansas City,10.5,53.0
+61,qk1ri2,Game Thread: Dallas Cowboys (5-1) at Minnesota Vikings (3-3),2021-10-31,8,Minnesota Vikings,3,3,0,Dallas Cowboys,5,1,0,20,16,Cowboys,36,4,Minnesota,4.0,49.0
+62,qjxeb2,Game Thread: Tampa Bay Buccaneers (6-1) at New Orleans Saints (4-2),2021-10-31,8,New Orleans Saints,4,2,0,Tampa Bay Buccaneers,6,1,0,27,36,Saints,63,9,New Orleans,4.0,48.5
+63,qjxcm8,Game Thread: Washington Football Team (2-5) at Denver Broncos (3-4),2021-10-31,8,Denver Broncos,3,4,0,Washington Football Team,2,5,0,10,17,Broncos,27,7,Denver,4.0,45.0
+64,qjwy0w,Game Thread: Jacksonville Jaguars (1-5) at Seattle Seahawks (2-5),2021-10-31,8,Seattle Seahawks,2,5,0,Jacksonville Jaguars,1,5,0,7,31,Seahawks,38,24,Seattle,4.0,44.5
+65,qjwxzs,Game Thread: New England Patriots (3-4) at Los Angeles Chargers (4-2),2021-10-31,8,Los Angeles Chargers,4,2,0,New England Patriots,3,4,0,27,24,Patriots,51,3,Los Angeles,3.5,50.5
+66,qjt4q7,Game Thread: Tennessee Titans (5-2) at Indianapolis Colts (3-4),2021-10-31,8,Indianapolis Colts,3,4,0,Tennessee Titans,5,2,0,34,31,Titans,65,3,Indianapolis,3.0,51.0
+67,qjt4or,Game Thread: Cincinnati Bengals (5-2) at New York Jets (1-5),2021-10-31,8,New York Jets,1,5,0,Cincinnati Bengals,5,2,0,31,34,Jets,65,3,New York,11.5,43.0
+68,qjt4ny,Game Thread: Miami Dolphins (1-6) at Buffalo Bills (4-2),2021-10-31,8,Buffalo Bills,4,2,0,Miami Dolphins,1,6,0,11,26,Bills,37,15,Buffalo,15.0,48.5
+69,qjt4mk,Game Thread: Carolina Panthers (3-4) at Atlanta Falcons (3-3),2021-10-31,8,Atlanta Falcons,3,3,0,Carolina Panthers,3,4,0,19,13,Panthers,32,6,Atlanta,2.5,46.5
+70,qjt4l4,Game Thread: San Francisco 49ers (2-4) at Chicago Bears (3-4),2021-10-31,8,Chicago Bears,3,4,0,San Francisco 49ers,2,4,0,33,22,49ers,55,11,Chicago,4.5,40.0
+71,qjt4jz,Game Thread: Philadelphia Eagles (2-5) at Detroit Lions (0-7),2021-10-31,8,Detroit Lions,0,7,0,Philadelphia Eagles,2,5,0,44,6,Eagles,50,38,Detroit,3.0,48.0
+72,qjt4h9,Game Thread: Pittsburgh Steelers (3-3) at Cleveland Browns (4-3),2021-10-31,8,Cleveland Browns,4,3,0,Pittsburgh Steelers,3,3,0,15,10,Steelers,25,5,Cleveland,5.0,43.0
+73,qjt4fq,Game Thread: Los Angeles Rams (6-1) at Houston Texans (1-6),2021-10-31,8,Houston Texans,1,6,0,Los Angeles Rams,6,1,0,38,22,Rams,60,16,Houston,16.5,47.0
+74,qhzrsj,Game Thread: Green Bay Packers (6-1) at Arizona Cardinals (7-0),2021-10-28,8,Arizona Cardinals,7,0,0,Green Bay Packers,6,1,0,24,21,Packers,45,3,Arizona,6.5,50.5
+75,qp277h,Game Thread: Tennessee Titans (6-2) at Los Angeles Rams (7-1),2021-11-08,9,Los Angeles Rams,7,1,0,Tennessee Titans,6,2,0,28,16,Titans,44,12,Los Angeles,7.0,53.0
+76,qoxlry,Game Thread: Arizona Cardinals (7-1) at San Francisco 49ers (3-4),2021-11-07,9,San Francisco 49ers,3,4,0,Arizona Cardinals,7,1,0,31,17,Cardinals,48,14,San Francisco,5.5,44.5
+77,qoxlr2,Game Thread: Green Bay Packers (7-1) at Kansas City Chiefs (4-4),2021-11-07,9,Kansas City Chiefs,4,4,0,Green Bay Packers,7,1,0,7,13,Chiefs,20,6,Kansas City,7.0,48.0
+78,qox7bb,Game Thread: Los Angeles Chargers (4-3) at Philadelphia Eagles (3-5),2021-11-07,9,Philadelphia Eagles,3,5,0,Los Angeles Chargers,4,3,0,27,24,Chargers,51,3,Philadelphia,0.0,49.5
+79,qotcau,Game Thread: Las Vegas Raiders (5-2) at New York Giants (2-6),2021-11-07,9,New York Giants,2,6,0,Las Vegas Raiders,5,2,0,16,23,Giants,39,7,New York,3.0,46.5
+80,qotc9o,Game Thread: Houston Texans (1-7) at Miami Dolphins (1-7),2021-11-07,9,Miami Dolphins,1,7,0,Houston Texans,1,7,0,9,17,Dolphins,26,8,Miami,4.0,44.5
+81,qotc8h,Game Thread: Buffalo Bills (5-2) at Jacksonville Jaguars (1-6),2021-11-07,9,Jacksonville Jaguars,1,6,0,Buffalo Bills,5,2,0,6,9,Jaguars,15,3,Jacksonville,15.5,48.5
+82,qotc77,Game Thread: Cleveland Browns (4-4) at Cincinnati Bengals (5-3),2021-11-07,9,Cincinnati Bengals,5,3,0,Cleveland Browns,4,4,0,41,16,Browns,57,25,Cincinnati,1.5,47.5
+83,qotc5w,Game Thread: Minnesota Vikings (3-4) at Baltimore Ravens (5-2),2021-11-07,9,Baltimore Ravens,5,2,0,Minnesota Vikings,3,4,0,31,34,Ravens,65,3,Baltimore,7.0,51.0
+84,qotc48,Game Thread: New England Patriots (4-4) at Carolina Panthers (4-4),2021-11-07,9,Carolina Panthers,4,4,0,New England Patriots,4,4,0,24,6,Patriots,30,18,Carolina,3.5,41.5
+85,qotc2w,Game Thread: Denver Broncos (4-4) at Dallas Cowboys (6-1),2021-11-07,9,Dallas Cowboys,6,1,0,Denver Broncos,4,4,0,30,16,Broncos,46,14,Dallas,10.0,50.0
+86,qotc16,Game Thread: Atlanta Falcons (3-4) at New Orleans Saints (5-2),2021-11-07,9,New Orleans Saints,5,2,0,Atlanta Falcons,3,4,0,27,25,Falcons,52,2,New Orleans,6.5,43.0
+87,qmy5sp,Game Thread: New York Jets (2-5) at Indianapolis Colts (3-5),2021-11-04,9,Indianapolis Colts,3,5,0,New York Jets,2,5,0,30,45,Colts,75,15,Indianapolis,10.0,45.5
+88,qu409m,Game Thread: Kansas City Chiefs (5-4) at Las Vegas Raiders (5-3),2021-11-15,10,Las Vegas Raiders,5,3,0,Kansas City Chiefs,5,4,0,14,41,Chiefs,55,27,Las Vegas,2.5,53.5
+89,qtz80t,Game Thread: Seattle Seahawks (3-5) at Green Bay Packers (7-2),2021-11-14,10,Green Bay Packers,7,2,0,Seattle Seahawks,3,5,0,17,0,Packers,17,17,Green Bay,3.0,49.0
+90,qtz7zt,Game Thread: Philadelphia Eagles (3-6) at Denver Broncos (5-4),2021-11-14,10,Denver Broncos,5,4,0,Philadelphia Eagles,3,6,0,13,30,Eagles,43,17,Denver,0.0,44.5
+91,qtysgq,Game Thread: Carolina Panthers (4-5) at Arizona Cardinals (8-1),2021-11-14,10,Arizona Cardinals,8,1,0,Carolina Panthers,4,5,0,10,34,Panthers,44,24,Arizona,7.0,41.5
+92,qtyseh,Game Thread: Minnesota Vikings (3-5) at Los Angeles Chargers (5-3),2021-11-14,10,Los Angeles Chargers,5,3,0,Minnesota Vikings,3,5,0,20,27,Vikings,47,7,Los Angeles,3.0,53.5
+93,qtuqst,Game Thread: Jacksonville Jaguars (2-6) at Indianapolis Colts (4-5),2021-11-14,10,Indianapolis Colts,4,5,0,Jacksonville Jaguars,2,6,0,23,17,Colts,40,6,Indianapolis,10.5,48.0
+94,qtuqqs,Game Thread: New Orleans Saints (5-3) at Tennessee Titans (7-2),2021-11-14,10,Tennessee Titans,7,2,0,New Orleans Saints,5,3,0,23,21,Titans,44,2,Tennessee,3.0,42.5
+95,qtuqoq,Game Thread: Atlanta Falcons (4-4) at Dallas Cowboys (6-2),2021-11-14,10,Dallas Cowboys,6,2,0,Atlanta Falcons,4,4,0,43,3,Cowboys,46,40,Dallas,7.5,55.0
+96,qtuqn7,Game Thread: Cleveland Browns (5-4) at New England Patriots (5-4),2021-11-14,10,New England Patriots,5,4,0,Cleveland Browns,5,4,0,45,7,Patriots,52,38,New England,2.5,44.5
+97,qtuqls,Game Thread: Detroit Lions (0-8) at Pittsburgh Steelers (6-3),2021-11-14,10,Pittsburgh Steelers,6,3,0,Detroit Lions,0,8,0,16,16,Steelers,32,0,Pittsburgh,5.5,40.5
+98,qtuqkr,Game Thread: Tampa Bay Buccaneers (6-2) at Washington Football Team (2-6),2021-11-14,10,Washington Football Team,2,6,0,Tampa Bay Buccaneers,6,2,0,29,19,Football Team,48,10,Washington,10.0,50.5
+99,qtuqjl,Game Thread: Buffalo Bills (5-3) at New York Jets (2-6),2021-11-14,10,New York Jets,2,6,0,Buffalo Bills,5,3,0,17,45,Bills,62,28,New York,13.5,48.5
+100,qrzh49,Game Thread: Baltimore Ravens (6-2) at Miami Dolphins (2-7),2021-11-12,10,Miami Dolphins,2,7,0,Baltimore Ravens,6,2,0,22,10,Dolphins,32,12,Miami,8.5,46.5
+101,qz8z0d,Game Thread: Pittsburgh Steelers (5-3-1) at Los Angeles Chargers (5-4),2021-11-22,11,Los Angeles Chargers,5,4,0,Pittsburgh Steelers,5,3,1,41,37,Chargers,78,4,Los Angeles,6.5,47.5
+102,qz47b2,Game Thread: Dallas Cowboys (7-2) at Kansas City Chiefs (6-4),2021-11-21,11,Kansas City Chiefs,6,4,0,Dallas Cowboys,7,2,0,19,9,Chiefs,28,10,Kansas City,2.5,56.0
+103,qz47aj,Game Thread: Arizona Cardinals (8-2) at Seattle Seahawks (3-6),2021-11-21,11,Seattle Seahawks,3,6,0,Arizona Cardinals,8,2,0,13,23,Cardinals,36,10,Seattle,4.5,45.0
+104,qz3slh,Game Thread: Cincinnati Bengals (5-4) at Las Vegas Raiders (5-4),2021-11-21,11,Las Vegas Raiders,5,4,0,Cincinnati Bengals,5,4,0,13,32,Bengals,45,19,Las Vegas,2.0,50.5
+105,qyzund,Game Thread: Baltimore Ravens (6-3) at Chicago Bears (3-7),2021-11-21,11,Chicago Bears,3,7,0,Baltimore Ravens,6,3,0,13,16,Ravens,29,3,Chicago,1.0,40.5
+106,qyzumb,Game Thread: Green Bay Packers (8-2) at Minnesota Vikings (4-5),2021-11-21,11,Minnesota Vikings,4,5,0,Green Bay Packers,8,2,0,34,31,Vikings,65,3,Minnesota,1.5,47.0
+107,qyzukv,Game Thread: Houston Texans (1-8) at Tennessee Titans (8-2),2021-11-21,11,Tennessee Titans,8,2,0,Houston Texans,1,8,0,13,22,Texans,35,9,Tennessee,10.0,45.0
+108,qyzuil,Game Thread: San Francisco 49ers (4-5) at Jacksonville Jaguars (2-7),2021-11-21,11,Jacksonville Jaguars,2,7,0,San Francisco 49ers,4,5,0,10,30,49ers,40,20,Jacksonville,6.5,45.5
+109,qyzuhm,Game Thread: Detroit Lions (0-8-1) at Cleveland Browns (5-5),2021-11-21,11,Cleveland Browns,5,5,0,Detroit Lions,0,8,1,13,10,Browns,23,3,Cleveland,13.5,42.5
+110,qyzug0,Game Thread: Indianapolis Colts (5-5) at Buffalo Bills (6-3),2021-11-21,11,Buffalo Bills,6,3,0,Indianapolis Colts,5,5,0,15,41,Colts,56,26,Buffalo,7.0,49.5
+111,qyzuee,Game Thread: Washington Football Team (3-6) at Carolina Panthers (5-5),2021-11-21,11,Carolina Panthers,5,5,0,Washington Football Team,3,6,0,21,27,Football Team,48,6,Carolina,3.0,43.0
+112,qyzud1,Game Thread: Miami Dolphins (3-7) at New York Jets (2-7),2021-11-21,11,New York Jets,2,7,0,Miami Dolphins,3,7,0,17,24,Dolphins,41,7,New York,3.5,44.5
+113,qyzubr,Game Thread: New Orleans Saints (5-4) at Philadelphia Eagles (4-6),2021-11-21,11,Philadelphia Eagles,4,6,0,New Orleans Saints,5,4,0,40,29,Eagles,69,11,Philadelphia,3.0,42.0
+114,qx46kz,Game Thread: New England Patriots (6-4) at Atlanta Falcons (4-5),2021-11-19,11,Atlanta Falcons,4,5,0,New England Patriots,6,4,0,0,25,Patriots,25,25,Atlanta,7.0,47.0
+115,r4j5cz,Game Thread: Cleveland Browns (6-5) at Baltimore Ravens (7-3),2021-11-29,12,Baltimore Ravens,7,3,0,Cleveland Browns,6,5,0,16,10,Ravens,26,6,Baltimore,3.0,47.5
+116,r4e4pc,Game Thread: Minnesota Vikings (5-5) at San Francisco 49ers (5-5),2021-11-28,12,San Francisco 49ers,5,5,0,Minnesota Vikings,5,5,0,34,26,49ers,60,8,San Francisco,4.0,49.0
+117,r4e4oe,Game Thread: Los Angeles Rams (7-3) at Green Bay Packers (8-3),2021-11-28,12,Green Bay Packers,8,3,0,Los Angeles Rams,7,3,0,36,28,Packers,64,8,Green Bay,1.5,46.5
+118,r4dogv,Game Thread: Los Angeles Chargers (6-4) at Denver Broncos (5-5),2021-11-28,12,Denver Broncos,5,5,0,Los Angeles Chargers,6,4,0,28,13,Broncos,41,15,Denver,2.5,47.0
+119,r49i9v,Game Thread: Carolina Panthers (5-6) at Miami Dolphins (4-7),2021-11-28,12,Miami Dolphins,4,7,0,Carolina Panthers,5,6,0,33,10,Dolphins,43,23,Miami,1.5,40.5
+120,r49i8f,Game Thread: Philadelphia Eagles (5-6) at New York Giants (3-7),2021-11-28,12,New York Giants,3,7,0,Philadelphia Eagles,5,6,0,13,7,Giants,20,6,New York,4.0,45.0
+121,r49i7c,Game Thread: New York Jets (2-8) at Houston Texans (2-8),2021-11-28,12,Houston Texans,2,8,0,New York Jets,2,8,0,14,21,Jets,35,7,Houston,2.5,44.5
+122,r49i5l,Game Thread: Tampa Bay Buccaneers (7-3) at Indianapolis Colts (6-5),2021-11-28,12,Indianapolis Colts,6,5,0,Tampa Bay Buccaneers,7,3,0,31,38,Buccaneers,69,7,Indianapolis,3.0,53.0
+123,r49i2q,Game Thread: Atlanta Falcons (4-6) at Jacksonville Jaguars (2-8),2021-11-28,12,Jacksonville Jaguars,2,8,0,Atlanta Falcons,4,6,0,14,21,Falcons,35,7,Jacksonville,1.5,46.0
+124,r49i14,Game Thread: Pittsburgh Steelers (5-4-1) at Cincinnati Bengals (6-4),2021-11-28,12,Cincinnati Bengals,6,4,0,Pittsburgh Steelers,5,4,1,41,10,Bengals,51,31,Cincinnati,3.5,43.5
+125,r49hzv,Game Thread: Tennessee Titans (8-3) at New England Patriots (7-4),2021-11-28,12,New England Patriots,7,4,0,Tennessee Titans,8,3,0,36,13,Patriots,49,23,New England,7.0,43.0
+126,r2avwq,Game Thread: Buffalo Bills (6-4) at New Orleans Saints (5-5),2021-11-26,12,New Orleans Saints,5,5,0,Buffalo Bills,6,4,0,6,31,Bills,37,25,New Orleans,7.0,45.0
+127,r26chp,Game Thread: Las Vegas Raiders (5-5) at Dallas Cowboys (7-3),2021-11-25,12,Dallas Cowboys,7,3,0,Las Vegas Raiders,5,5,0,33,36,Raiders,69,3,Dallas,7.0,51.0
+128,r2112a,Game Thread: Chicago Bears (3-7) at Detroit Lions (0-9-1),2021-11-25,12,Detroit Lions,0,9,1,Chicago Bears,3,7,0,14,16,Bears,30,2,Detroit,2.5,41.5
+129,r9u88q,Game Thread: Denver Broncos (6-5) at Kansas City Chiefs (7-4),2021-12-06,13,Kansas City Chiefs,7,4,0,Denver Broncos,6,5,0,22,9,Chiefs,31,13,Kansas City,8.5,46.5
+130,r9p5tt,Game Thread: San Francisco 49ers (6-5) at Seattle Seahawks (3-8),2021-12-05,13,Seattle Seahawks,3,8,0,San Francisco 49ers,6,5,0,30,23,Seahawks,53,7,Seattle,2.5,44.5
+131,r9p5t1,Game Thread: Baltimore Ravens (8-3) at Pittsburgh Steelers (5-5-1),2021-12-05,13,Pittsburgh Steelers,5,5,1,Baltimore Ravens,8,3,0,20,19,Steelers,39,1,Pittsburgh,4.0,44.0
+132,r9oqmv,Game Thread: Washington Football Team (5-6) at Las Vegas Raiders (6-5),2021-12-05,13,Las Vegas Raiders,6,5,0,Washington Football Team,5,6,0,15,17,Football Team,32,2,Las Vegas,1.5,47.5
+133,r9oql5,Game Thread: Jacksonville Jaguars (2-9) at Los Angeles Rams (7-4),2021-12-05,13,Los Angeles Rams,7,4,0,Jacksonville Jaguars,2,9,0,37,7,Rams,44,30,Los Angeles,14.0,48.0
+134,r9kmb8,Game Thread: Los Angeles Chargers (6-5) at Cincinnati Bengals (7-4),2021-12-05,13,Cincinnati Bengals,7,4,0,Los Angeles Chargers,6,5,0,22,41,Chargers,63,19,Cincinnati,2.5,49.5
+135,r9km9u,Game Thread: Arizona Cardinals (9-2) at Chicago Bears (4-7),2021-12-05,13,Chicago Bears,4,7,0,Arizona Cardinals,9,2,0,22,33,Cardinals,55,11,Chicago,7.5,43.0
+136,r9km7z,Game Thread: Philadelphia Eagles (5-7) at New York Jets (3-8),2021-12-05,13,New York Jets,3,8,0,Philadelphia Eagles,5,7,0,18,33,Eagles,51,15,New York,5.0,44.0
+137,r9km6p,Game Thread: Minnesota Vikings (5-6) at Detroit Lions (0-10-1),2021-12-05,13,Detroit Lions,0,10,1,Minnesota Vikings,5,6,0,29,27,Lions,56,2,Detroit,7.0,47.5
+138,r9km3v,Game Thread: Indianapolis Colts (6-6) at Houston Texans (2-9),2021-12-05,13,Houston Texans,2,9,0,Indianapolis Colts,6,6,0,0,31,Colts,31,31,Houston,10.0,45.5
+139,r9km2q,Game Thread: New York Giants (4-7) at Miami Dolphins (5-7),2021-12-05,13,Miami Dolphins,5,7,0,New York Giants,4,7,0,20,9,Dolphins,29,11,Miami,7.0,40.0
+140,r9km15,Game Thread: Tampa Bay Buccaneers (8-3) at Atlanta Falcons (5-6),2021-12-05,13,Atlanta Falcons,5,6,0,Tampa Bay Buccaneers,8,3,0,17,30,Buccaneers,47,13,Atlanta,10.5,50.5
+141,r7m11l,Game Thread: Dallas Cowboys (7-4) at New Orleans Saints (5-6),2021-12-03,13,New Orleans Saints,5,6,0,Dallas Cowboys,7,4,0,17,27,Cowboys,44,10,New Orleans,6.5,45.5
+142,rf2vaw,Game Thread: Chicago Bears (4-8) at Green Bay Packers (9-3),2021-12-13,14,Green Bay Packers,9,3,0,Chicago Bears,4,8,0,45,30,Packers,75,15,Green Bay,11.5,43.0
+143,rey2iy,Game Thread: Buffalo Bills (7-5) at Tampa Bay Buccaneers (9-3),2021-12-12,14,Tampa Bay Buccaneers,9,3,0,Buffalo Bills,7,5,0,33,27,Buccaneers,60,6,Tampa Bay,3.0,53.0
+144,rey2i7,Game Thread: San Francisco 49ers (6-6) at Cincinnati Bengals (7-5),2021-12-12,14,Cincinnati Bengals,7,5,0,San Francisco 49ers,6,6,0,23,26,49ers,49,3,Cincinnati,2.5,49.0
+145,rexnnq,Game Thread: Detroit Lions (1-10-1) at Denver Broncos (6-6),2021-12-12,14,Denver Broncos,6,6,0,Detroit Lions,1,10,1,38,10,Broncos,48,28,Denver,12.5,42.0
+146,rexnmj,Game Thread: New York Giants (4-8) at Los Angeles Chargers (7-5),2021-12-12,14,Los Angeles Chargers,7,5,0,New York Giants,4,8,0,37,21,Chargers,58,16,Los Angeles,9.0,43.5
+147,retqyc,Game Thread: Baltimore Ravens (8-4) at Cleveland Browns (6-6),2021-12-12,14,Cleveland Browns,6,6,0,Baltimore Ravens,8,4,0,24,22,Browns,46,2,Cleveland,3.0,44.0
+148,retqx4,Game Thread: Atlanta Falcons (5-7) at Carolina Panthers (5-7),2021-12-12,14,Carolina Panthers,5,7,0,Atlanta Falcons,5,7,0,21,29,Falcons,50,8,Carolina,2.5,41.5
+149,retqvx,Game Thread: New Orleans Saints (5-7) at New York Jets (3-9),2021-12-12,14,New York Jets,3,9,0,New Orleans Saints,5,7,0,9,30,Saints,39,21,New York,4.5,42.0
+150,retquq,Game Thread: Las Vegas Raiders (6-6) at Kansas City Chiefs (8-4),2021-12-12,14,Kansas City Chiefs,8,4,0,Las Vegas Raiders,6,6,0,48,9,Chiefs,57,39,Kansas City,10.0,48.0
+151,retqtp,Game Thread: Seattle Seahawks (4-8) at Houston Texans (2-10),2021-12-12,14,Houston Texans,2,10,0,Seattle Seahawks,4,8,0,13,33,Seahawks,46,20,Houston,9.5,41.0
+152,retqsa,Game Thread: Jacksonville Jaguars (2-10) at Tennessee Titans (8-4),2021-12-12,14,Tennessee Titans,8,4,0,Jacksonville Jaguars,2,10,0,20,0,Titans,20,20,Tennessee,8.5,44.5
+153,retqpv,Game Thread: Dallas Cowboys (8-4) at Washington Football Team (6-6),2021-12-12,14,Washington Football Team,6,6,0,Dallas Cowboys,8,4,0,20,27,Cowboys,47,7,Washington,6.5,48.0
+154,rcvws5,Game Thread: Pittsburgh Steelers (6-5-1) at Minnesota Vikings (5-7),2021-12-10,14,Minnesota Vikings,5,7,0,Pittsburgh Steelers,6,5,1,36,28,Vikings,64,8,Minnesota,3.5,45.0
+155,rkxoz0,Game Thread: Las Vegas Raiders (6-7) at Cleveland Browns (7-6),2021-12-20,15,Cleveland Browns,7,6,0,Las Vegas Raiders,6,7,0,14,16,Raiders,30,2,Cleveland,3.0,41.5
+156,rkagcp,Game Thread: New Orleans Saints (6-7) at Tampa Bay Buccaneers (10-3),2021-12-20,15,Tampa Bay Buccaneers,10,3,0,New Orleans Saints,6,7,0,0,9,Saints,9,9,Tampa Bay,11.5,45.5
+157,rk5ixc,Game Thread: Green Bay Packers (10-3) at Baltimore Ravens (8-5),2021-12-19,15,Baltimore Ravens,8,5,0,Green Bay Packers,10,3,0,30,31,Packers,61,1,Baltimore,9.0,45.0
+158,rk54fv,Game Thread: Atlanta Falcons (6-7) at San Francisco 49ers (7-6),2021-12-19,15,San Francisco 49ers,7,6,0,Atlanta Falcons,6,7,0,31,13,49ers,44,18,San Francisco,9.0,48.0
+159,rk54f1,Game Thread: Cincinnati Bengals (7-6) at Denver Broncos (7-6),2021-12-19,15,Denver Broncos,7,6,0,Cincinnati Bengals,7,6,0,10,15,Bengals,25,5,Denver,3.0,44.0
+160,rk1eoi,Game Thread: Dallas Cowboys (9-4) at New York Giants (4-9),2021-12-19,15,New York Giants,4,9,0,Dallas Cowboys,9,4,0,6,21,Cowboys,27,15,New York,11.5,44.5
+161,rk1emw,Game Thread: Carolina Panthers (5-8) at Buffalo Bills (7-6),2021-12-19,15,Buffalo Bills,7,6,0,Carolina Panthers,5,8,0,31,14,Bills,45,17,Buffalo,13.0,44.0
+162,rk1el5,Game Thread: Arizona Cardinals (10-3) at Detroit Lions (1-11-1),2021-12-19,15,Detroit Lions,1,11,1,Arizona Cardinals,10,3,0,30,12,Lions,42,18,Detroit,13.0,47.0
+163,rk1eju,Game Thread: New York Jets (3-10) at Miami Dolphins (6-7),2021-12-19,15,Miami Dolphins,6,7,0,New York Jets,3,10,0,31,24,Dolphins,55,7,Miami,9.5,41.0
+164,rk1ei8,Game Thread: Tennessee Titans (9-4) at Pittsburgh Steelers (6-6-1),2021-12-19,15,Pittsburgh Steelers,6,6,1,Tennessee Titans,9,4,0,19,13,Steelers,32,6,Pittsburgh,1.5,42.5
+165,rk1efl,Game Thread: Houston Texans (2-11) at Jacksonville Jaguars (2-11),2021-12-19,15,Jacksonville Jaguars,2,11,0,Houston Texans,2,11,0,16,30,Texans,46,14,Jacksonville,4.5,39.5
+166,rjkthj,Game Thread: New England Patriots (9-4) at Indianapolis Colts (7-6),2021-12-19,15,Indianapolis Colts,7,6,0,New England Patriots,9,4,0,27,17,Colts,44,10,Indianapolis,1.0,46.5
+167,ri4u02,Game Thread: Kansas City Chiefs (9-4) at Los Angeles Chargers (8-5),2021-12-17,15,Los Angeles Chargers,8,5,0,Kansas City Chiefs,9,4,0,28,34,Chiefs,62,6,Los Angeles,3.0,54.0
+168,rpaeti,Game Thread: Washington Football Team (6-8) at Dallas Cowboys (10-4),2021-12-27,16,Dallas Cowboys,10,4,0,Washington Football Team,6,8,0,56,14,Cowboys,70,42,Dallas,10.0,46.0
+169,rp5h7j,Game Thread: Denver Broncos (7-7) at Las Vegas Raiders (7-7),2021-12-26,16,Las Vegas Raiders,7,7,0,Denver Broncos,7,7,0,17,13,Raiders,30,4,Las Vegas,0.0,41.5
+170,rp5h6j,Game Thread: Pittsburgh Steelers (7-6-1) at Kansas City Chiefs (10-4),2021-12-26,16,Kansas City Chiefs,10,4,0,Pittsburgh Steelers,7,6,1,36,10,Chiefs,46,26,Kansas City,10.0,44.0
+171,rp54ni,Game Thread: Chicago Bears (4-10) at Seattle Seahawks (5-9),2021-12-26,16,Seattle Seahawks,5,9,0,Chicago Bears,4,10,0,24,25,Bears,49,1,Seattle,7.0,41.0
+172,rp1hq3,Game Thread: New York Giants (4-10) at Philadelphia Eagles (7-7),2021-12-26,16,Philadelphia Eagles,7,7,0,New York Giants,4,10,0,34,10,Eagles,44,24,Philadelphia,11.0,41.0
+173,rp1hnq,Game Thread: Baltimore Ravens (8-6) at Cincinnati Bengals (8-6),2021-12-26,16,Cincinnati Bengals,8,6,0,Baltimore Ravens,8,6,0,41,21,Bengals,62,20,Cincinnati,7.5,43.5
+174,rp1hks,Game Thread: Los Angeles Chargers (8-6) at Houston Texans (3-11),2021-12-26,16,Houston Texans,3,11,0,Los Angeles Chargers,8,6,0,41,29,Texans,70,12,Houston,13.0,45.5
+175,rp1hjg,Game Thread: Detroit Lions (2-11-1) at Atlanta Falcons (6-8),2021-12-26,16,Atlanta Falcons,6,8,0,Detroit Lions,2,11,1,20,16,Falcons,36,4,Atlanta,7.5,42.5
+176,rp1hhy,Game Thread: Jacksonville Jaguars (2-12) at New York Jets (3-11),2021-12-26,16,New York Jets,3,11,0,Jacksonville Jaguars,2,12,0,26,21,Jets,47,5,New York,2.5,43.0
+177,rp1heb,Game Thread: Tampa Bay Buccaneers (10-4) at Carolina Panthers (5-9),2021-12-26,16,Carolina Panthers,5,9,0,Tampa Bay Buccaneers,10,4,0,6,32,Buccaneers,38,26,Carolina,11.0,44.0
+178,rp1hcl,Game Thread: Buffalo Bills (8-6) at New England Patriots (9-5),2021-12-26,16,New England Patriots,9,5,0,Buffalo Bills,8,6,0,21,33,Bills,54,12,New England,1.0,43.5
+179,rp1hb0,Game Thread: Los Angeles Rams (10-4) at Minnesota Vikings (7-7),2021-12-26,16,Minnesota Vikings,7,7,0,Los Angeles Rams,10,4,0,23,30,Rams,53,7,Minnesota,3.0,48.5
+180,roldw4,Game Thread: Indianapolis Colts (8-6) at Arizona Cardinals (10-4),2021-12-26,16,Arizona Cardinals,10,4,0,Indianapolis Colts,8,6,0,16,22,Colts,38,6,Arizona,3.0,48.0
+181,rohcvp,Game Thread: Cleveland Browns (7-7) at Green Bay Packers (11-3),2021-12-25,16,Green Bay Packers,11,3,0,Cleveland Browns,7,7,0,24,22,Packers,46,2,Green Bay,7.5,47.0
+182,rn9y5z,Game Thread: San Francisco 49ers (8-6) at Tennessee Titans (9-5),2021-12-24,16,Tennessee Titans,9,5,0,San Francisco 49ers,8,6,0,20,17,Titans,37,3,Tennessee,3.5,45.0
+183,ruofgm,Game Thread: Minnesota Vikings (7-8) at Green Bay Packers (12-3),2022-01-03,17,Green Bay Packers,12,3,0,Minnesota Vikings,7,8,0,37,10,Packers,47,27,Green Bay,13.0,42.0
+184,ruj6th,Game Thread: Arizona Cardinals (10-5) at Dallas Cowboys (11-4),2022-01-02,17,Dallas Cowboys,11,4,0,Arizona Cardinals,10,5,0,22,25,Cardinals,47,3,Dallas,6.5,52.5
+185,ruj6sd,Game Thread: Detroit Lions (2-12-1) at Seattle Seahawks (5-10),2022-01-02,17,Seattle Seahawks,5,10,0,Detroit Lions,2,12,1,51,29,Seahawks,80,22,Seattle,9.0,41.0
+186,ruj6pr,Game Thread: Carolina Panthers (5-10) at New Orleans Saints (7-8),2022-01-02,17,New Orleans Saints,7,8,0,Carolina Panthers,5,10,0,18,10,Saints,28,8,New Orleans,7.0,37.0
+187,ruiprj,Game Thread: Denver Broncos (7-8) at Los Angeles Chargers (8-7),2022-01-02,17,Los Angeles Chargers,8,7,0,Denver Broncos,7,8,0,34,13,Chargers,47,21,Los Angeles,7.5,45.0
+188,ruipqi,Game Thread: Houston Texans (4-11) at San Francisco 49ers (8-7),2022-01-02,17,San Francisco 49ers,8,7,0,Houston Texans,4,11,0,23,7,49ers,30,16,San Francisco,13.5,44.0
+189,ruejqh,Game Thread: Philadelphia Eagles (8-7) at Washington Football Team (6-9),2022-01-02,17,Washington Football Team,6,9,0,Philadelphia Eagles,8,7,0,16,20,Eagles,36,4,Washington,6.0,44.5
+190,ruejoq,Game Thread: Atlanta Falcons (7-8) at Buffalo Bills (9-6),2022-01-02,17,Buffalo Bills,9,6,0,Atlanta Falcons,7,8,0,29,15,Bills,44,14,Buffalo,14.0,46.0
+191,ruejna,Game Thread: New York Giants (4-11) at Chicago Bears (5-10),2022-01-02,17,Chicago Bears,5,10,0,New York Giants,4,11,0,29,3,Bears,32,26,Chicago,6.5,36.5
+192,ruejkt,Game Thread: Kansas City Chiefs (11-4) at Cincinnati Bengals (9-6),2022-01-02,17,Cincinnati Bengals,9,6,0,Kansas City Chiefs,11,4,0,34,31,Bengals,65,3,Cincinnati,3.5,51.0
+193,ruejhw,Game Thread: Las Vegas Raiders (8-7) at Indianapolis Colts (9-6),2022-01-02,17,Indianapolis Colts,9,6,0,Las Vegas Raiders,8,7,0,20,23,Raiders,43,3,Indianapolis,8.5,46.5
+194,ruejgn,Game Thread: Jacksonville Jaguars (2-13) at New England Patriots (9-6),2022-01-02,17,New England Patriots,9,6,0,Jacksonville Jaguars,2,13,0,50,10,Patriots,60,40,New England,17.0,41.5
+195,ruejf3,Game Thread: Miami Dolphins (8-7) at Tennessee Titans (10-5),2022-01-02,17,Tennessee Titans,10,5,0,Miami Dolphins,8,7,0,34,3,Titans,37,31,Tennessee,3.0,41.0
+196,ruejcx,Game Thread: Tampa Bay Buccaneers (11-4) at New York Jets (4-11),2022-01-02,17,New York Jets,4,11,0,Tampa Bay Buccaneers,11,4,0,24,28,Buccaneers,52,4,New York,14.5,47.5
+197,ruejb4,Game Thread: Los Angeles Rams (11-4) at Baltimore Ravens (8-7),2022-01-02,17,Baltimore Ravens,8,7,0,Los Angeles Rams,11,4,0,19,20,Rams,39,1,Baltimore,7.0,46.5
+198,s01amw,Game Thread: New York Jets (4-12) at Buffalo Bills (10-6),2022-01-09,18,Buffalo Bills,10,6,0,New York Jets,4,12,0,27,10,Bills,37,17,Buffalo,16.0,43.0
+199,s01am6,Game Thread: New Orleans Saints (8-8) at Atlanta Falcons (7-9),2022-01-09,18,Atlanta Falcons,7,9,0,New Orleans Saints,8,8,0,20,30,Saints,50,10,Atlanta,4.5,40.0
+200,s01al7,Game Thread: New England Patriots (10-6) at Miami Dolphins (8-8),2022-01-09,18,Miami Dolphins,8,8,0,New England Patriots,10,6,0,33,24,Dolphins,57,9,Miami,6.0,41.0
+201,s01akd,Game Thread: Seattle Seahawks (6-10) at Arizona Cardinals (11-5),2022-01-09,18,Arizona Cardinals,11,5,0,Seattle Seahawks,6,10,0,30,38,Seahawks,68,8,Arizona,5.5,48.5
+202,s01aj4,Game Thread: Carolina Panthers (5-11) at Tampa Bay Buccaneers (12-4),2022-01-09,18,Tampa Bay Buccaneers,12,4,0,Carolina Panthers,5,11,0,41,17,Buccaneers,58,24,Tampa Bay,11.0,43.0
+203,s01ai7,Game Thread: San Francisco 49ers (9-7) at Los Angeles Rams (12-4),2022-01-09,18,Los Angeles Rams,12,4,0,San Francisco 49ers,9,7,0,24,27,49ers,51,3,Los Angeles,3.0,46.5
+204,rzwoeo,Game Thread: Cincinnati Bengals (10-6) at Cleveland Browns (7-9),2022-01-09,18,Cleveland Browns,7,9,0,Cincinnati Bengals,10,6,0,21,16,Browns,37,5,Cleveland,6.5,38.0
+205,rzwodr,Game Thread: Pittsburgh Steelers (8-7-1) at Baltimore Ravens (8-8),2022-01-09,18,Baltimore Ravens,8,8,0,Pittsburgh Steelers,8,7,1,13,16,Steelers,29,3,Baltimore,3.0,40.5
+206,rzwoca,Game Thread: Tennessee Titans (11-5) at Houston Texans (4-12),2022-01-09,18,Houston Texans,4,12,0,Tennessee Titans,11,5,0,25,28,Titans,53,3,Houston,11.0,43.0
+207,rzwoax,Game Thread: Chicago Bears (6-10) at Minnesota Vikings (7-9),2022-01-09,18,Minnesota Vikings,7,9,0,Chicago Bears,6,10,0,31,17,Vikings,48,14,Minnesota,3.5,45.0
+208,rzwo9f,Game Thread: Washington Football Team (6-10) at New York Giants (4-12),2022-01-09,18,New York Giants,4,12,0,Washington Football Team,6,10,0,7,22,Football Team,29,15,New York,6.0,36.5
+209,rzwo81,Game Thread: Indianapolis Colts (9-7) at Jacksonville Jaguars (2-14),2022-01-09,18,Jacksonville Jaguars,2,14,0,Indianapolis Colts,9,7,0,26,11,Jaguars,37,15,Jacksonville,14.0,43.5
+210,rzwo5r,Game Thread: Green Bay Packers (13-3) at Detroit Lions (2-13-1),2022-01-09,18,Detroit Lions,2,13,1,Green Bay Packers,13,3,0,37,30,Lions,67,7,Detroit,4.0,45.0
+211,rzez6y,Game Thread: Dallas Cowboys (11-5) at Philadelphia Eagles (9-7),2022-01-09,18,Philadelphia Eagles,9,7,0,Dallas Cowboys,11,5,0,26,51,Cowboys,77,25,Philadelphia,6.0,46.5
+212,rz9vjx,Game Thread: Kansas City Chiefs (11-5) at Denver Broncos (7-9),2022-01-08,18,Denver Broncos,7,9,0,Kansas City Chiefs,11,5,0,24,28,Chiefs,52,4,Denver,11.5,44.5

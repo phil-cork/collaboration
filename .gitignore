@@ -42,3 +42,6 @@ vignettes/*.pdf
 RedditTextAnalysis/client_secret.txt
 .gitignore
 RedditTextAnalysis/pw.txt
+RedditTextAnalysis/Reference/ds2_text_sentiment_twitter.ipynb
+RedditTextAnalysis/Reference/ds2_text_transformers_hugging.ipynb
+RedditTextAnalysis/Reference/ds2_text_textblob_smallexample.ipynb
