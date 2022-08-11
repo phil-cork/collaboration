@@ -205,8 +205,7 @@ def build_weekly_comments_df(gamethread_df: pd.DataFrame, week: int,
 
 def get_comments(reddit: praw.Reddit, submission_id: str):
     '''
-    If comments_only = True, returns a list of only the comment body text for downstream text analysis
-    If comments_only = False, the returned list is a list of tuples that includes the comment's author, content, upvotes, downvotes, created time, and author's flair.
+    Returned list is a list of tuples that includes the comment's author, content, upvotes, downvotes, created time, and author's flair.
     
     Parameters
     --- --- --- 
@@ -215,22 +214,20 @@ def get_comments(reddit: praw.Reddit, submission_id: str):
 
     submission_id: string
         The unique id associated with the reddit thread of interest. Gain by accessed by the reddit API or extracted from the thread's permalink.
-
-    comments_onlt: bool
-        Determines the contents of the list to be returned, either only the comment body text or additional details
     '''
+    print("Submission ID: " + submission_id)
 
     # create a praw.Submission object based on the subject_id to access comments
     submission = reddit.submission(submission_id)
     
     # ignore all of the "Load More Comment" prompts to return entire comment tree
-    
-    submission.comments.replace_more(limit=None, threshold=1)
-    print("Comments: " + str(len(submission.comments.list())))
+    submission.comments.replace_more(limit=None)
 
+    print("Comments: " + str(len(submission.comments.list())))
 
     comments_list = [(comment.id, submission_id, str(comment.author), str(comment.body), int(comment.ups), comment.created_utc, str(comment.author_flair_text)) for comment in submission.comments.list()]
 
+    print("Comments stored.")
     return comments_list
 
 
