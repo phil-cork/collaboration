@@ -1,0 +1,35 @@
+﻿team_abbreviation,team_name,location,mascot,division,conference
+BUF,buffalo bills,buffalo,bills,east,afc
+MIA,miami dolphins,miami,dolphins,east,afc
+NE,new england patriots,new england,patriots,east,afc
+NYJ,new york jets,new york,jets,east,afc
+BAL,baltimore ravens,baltimore,ravens,north,afc
+CIN,cincinnati bengals,cincinnati,bengals,north,afc
+CLE,cleveland browns,cleveland,browns,north,afc
+PIT,pittsburgh steelers,pittsburgh,steelers,north,afc
+HOU,houston texans,houston,texans,south,afc
+IND,indianapolis colts,indianapolis,colts,south,afc
+JAC,jacksonville jaguars,jacksonville,jaguars,south,afc
+TEN,tennessee titans,tennessee,titans,south,afc
+DEN,denver broncos,denver,broncos,west,afc
+KC,kansas city chiefs,kansas city,chiefs,west,afc
+LV,las vegas raiders,las vegas,raiders,west,afc
+LAC,los angeles chargers,los angeles,chargers,west,afc
+DAL,dallas cowboys,dallas,cowboys,east,nfc
+NYG,new york giants,new york,giants,east,nfc
+PHI,philadelphia eagles,philadelphia,eagles,east,nfc
+WAS,washington commanders,washington,commanders,east,nfc
+CHI,chicago bears,chicago,bears,north,nfc
+DET,detriot lions,detriot,lions,north,nfc
+GB,green bay packers,green bay,packers,north,nfc
+MIN,minnesota vikings,minnesota,vikings,north,nfc
+ATL,atlanta falcons,atlanta,falcons,south,nfc
+CAR,carolina pathers,carolina,pathers,south,nfc
+NO,new orleans saints,new orleans,saints,south,nfc
+TB,tampa bay buccaneers,tampa bay,buccaneers,south,nfc
+ARI,arizona cardinals,arizona,cardinals,west,nfc
+LAR,los angeles rams,los angeles,rams,west,nfc
+SF,san fransisco 49ers,san fransisco,49ers,west,nfc
+SEA,seattle seahawks,seattle,seahawks,west,nfc
+NFL,nfl,,,,
+NONE,none,,,,

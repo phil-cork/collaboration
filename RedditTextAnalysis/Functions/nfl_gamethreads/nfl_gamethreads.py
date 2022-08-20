@@ -1,3 +1,4 @@
+from inspect import Attribute
 from operator import index
 from statistics import stdev
 import pandas as pd
@@ -6,6 +7,8 @@ import praw
 from bs4 import BeautifulSoup
 from textblob import TextBlob
 import datetime
+import re
+import sqlite3
 
 
 
@@ -225,10 +228,50 @@ def get_comments(reddit: praw.Reddit, submission_id: str):
 
     print("Comments: " + str(len(submission.comments.list())))
 
-    comments_list = [(comment.id, submission_id, str(comment.author), str(comment.body), int(comment.ups), comment.created_utc, str(comment.author_flair_text)) for comment in submission.comments.list()]
+    comments_list = [(comment.id, 
+                      submission_id,
+                      str(comment.author), 
+                      str(comment.body), 
+                      int(comment.ups), 
+                      comment.created_utc, 
+                      process_flair(comment.author_flair_text)) for comment in submission.comments.list()]
 
     print("Comments stored.")
     return comments_list
+
+
+def process_flair(flair: str) -> str:
+    ''' 
+    Helper function that transforms author flairs, typically in the form of ':team: team' into the team abbreviation to match with Team table in DB
+    '''
+
+    if flair == '':
+        flair = 'none'
+
+    try:
+        # if the flairs doesn't start with an emoji ie :team:
+        if (flair.startswith(':')) and flair is not None:
+            try:
+                # store the text between the first two :s, the team name. automatically drops all spaces and extra characters after
+                found = re.search(':(.+?):', flair).group(1)
+            except AttributeError:
+                # if no :s found, just save original flair
+                found = flair
+
+            # if flair starts with a :, but there isn't a second match, search between the opening : and the space 
+            # (example in db includes ':Dolphins Dolphins')
+            if found.count(':') == 1:
+                found = re.search(':(.+?) ', found).group(1)
+
+            new_flair = found
+
+        else:
+            new_flair = flair
+    
+    except AttributeError:
+        new_flair = 'None'
+
+    return new_flair.lower()
 
 
 def analyze_text(text_df: pd.DataFrame, text_column: str):
