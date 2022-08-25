@@ -206,10 +206,11 @@ def build_weekly_comments_df(gamethread_df: pd.DataFrame, week: int,
     return comments_df
 
 
-def get_comments(reddit: praw.Reddit, submission_id: str):
+def get_comments(reddit: praw.Reddit, submission_id: str) -> pd.DataFrame:
     '''
-    Returned list is a list of tuples that includes the comment's author, content, upvotes, downvotes, created time, and author's flair.
-    
+    Returned dataframe includes the comment's author, content, upvotes, downvotes, created time, and author's flair,
+    as well as the comment's polarity and subjectivity.
+
     Parameters
     --- --- --- 
     reddit: praw.Reddit instance
@@ -228,16 +229,22 @@ def get_comments(reddit: praw.Reddit, submission_id: str):
 
     print("Comments: " + str(len(submission.comments.list())))
 
-    comments_list = [(comment.id, 
+    comment_list = [(comment.id, 
                       submission_id,
                       str(comment.author), 
                       str(comment.body), 
                       int(comment.ups), 
                       comment.created_utc, 
-                      process_flair(comment.author_flair_text)) for comment in submission.comments.list()]
+                      process_flair(comment.author_flair_text), # take the raw author_flair and extract only the team name
+                      TextBlob(str(comment.body)).sentiment.polarity, # get polarity and subjectivity for comment body
+                      TextBlob(str(comment.body)).sentiment.subjectivity) for comment in submission.comments.list()]
 
     print("Comments stored.")
-    return comments_list
+
+    comment_df = pd.DataFrame(comment_list, columns=['comment_id', 'submission_id', 'author', 'body', 'upvotes', 
+                                                         'utc_time', 'author_flair', 'polarity', 'subjectivity'])
+
+    return comment_df
 
 
 def process_flair(flair: str) -> str:
