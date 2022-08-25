@@ -191,20 +191,6 @@ def get_team_record(team_string: str):
 
 ### COMMENT FUNCTIONS ### 
 
-def build_weekly_comments_df(gamethread_df: pd.DataFrame, week: int,
-                             reddit:praw.Reddit, sub_id_col='id', week_col='week') -> pd.DataFrame:
-
-    gt_week_df = gamethread_df[gamethread_df[week_col]==week]
-    comments_list = []
-    
-    for each_id in gt_week_df[sub_id_col]:
-        submission_comments = get_comments(reddit, each_id, comments_only=False)
-        comments_list.append(submission_comments)
-    
-    comments_df = pd.DataFrame(comments_list, columns=['comment_id', 'submission_id', 'author', 'body', 'upvotes', 'utc_time', 'author_flair'])
-
-    return comments_df
-
 
 def get_comments(reddit: praw.Reddit, submission_id: str) -> pd.DataFrame:
     '''
@@ -281,6 +267,7 @@ def process_flair(flair: str) -> str:
     return new_flair.lower()
 
 
+# NB: used in notebooks for ad-hoc analysis, not part of the ingestion process
 def analyze_text(text_df: pd.DataFrame, text_column: str):
     '''
     Takes in a dataframe with a 'column of text and returns the dataframe with two new appended columns that include the
